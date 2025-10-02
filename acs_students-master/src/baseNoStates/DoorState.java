@@ -2,16 +2,19 @@ package baseNoStates;
 
 public abstract class DoorState {
   protected Door door;
-  protected String name; //state name
+  protected String name;
 
-  public DoorState(Door door) {
+  public DoorState(Door door, String name) {
     this.door = door;
+    this.name = name;
   }
 
-  // Abstract methods to implement
+  public String getName() {
+    return name;
+  }
+
   public abstract void open();
   public abstract void close();
   public abstract void lock();
   public abstract void unlock();
-
 }

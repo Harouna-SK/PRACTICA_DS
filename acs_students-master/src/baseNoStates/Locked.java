@@ -1,31 +1,33 @@
 package baseNoStates;
 
-// Clase concreta (C)
 public class Locked extends DoorState {
 
   public Locked(Door door) {
-    super(door);
-    this.name = States.LOCKED;
+    super(door, States.LOCKED);
   }
 
   @Override
   public void open() {
-    System.out.println("Can't open, door is locked.");
+    System.out.println("Can't open door " + door.getId() + " because it's locked");
   }
 
   @Override
   public void close() {
-    System.out.println("Door already closed and locked.");
+    if (door.isClosed()) {
+      System.out.println("Can't close door " + door.getId() + " because it's already closed");
+    } else {
+      System.out.println("Door " + door.getId() + " closed");
+    }
   }
 
   @Override
   public void lock() {
-    System.out.println("Door already locked.");
+    System.out.println("Door " + door.getId() + " is already locked");
   }
 
   @Override
   public void unlock() {
-    System.out.println("Unlocking door...");
+    door.setState(new Unlocked(door));
+    System.out.println("Door " + door.getId() + " unlocked");
   }
 }
-
