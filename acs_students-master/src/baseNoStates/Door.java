@@ -13,6 +13,7 @@ public class Door {
     this.id = id;
     closed = true;
     this.state = new Locked(this);
+
   }
 
   public void processRequest(RequestReader request) {
