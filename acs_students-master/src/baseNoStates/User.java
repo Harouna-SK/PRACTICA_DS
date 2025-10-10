@@ -1,5 +1,7 @@
 package baseNoStates;
 
+import baseNoStates.spaces.Space;
+
 public class User {
   private final String name;
   private final String credential;
@@ -17,4 +19,8 @@ public class User {
   public String toString() {
     return "User{name=" + name + ", credential=" + credential + "}";
   }
-}
+  }
+
+  public boolean canBeInSpace(Space sp){
+    
+  }

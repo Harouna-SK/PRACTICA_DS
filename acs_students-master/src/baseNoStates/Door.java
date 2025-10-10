@@ -1,6 +1,8 @@
 package baseNoStates;
 
 import baseNoStates.requests.RequestReader;
+import baseNoStates.spaces.Area;
+import baseNoStates.spaces.Space;
 import org.json.JSONObject;
 
 
@@ -8,12 +10,15 @@ public class Door {
   private final String id;
   private boolean closed; // physically
   private DoorState state; // logical state
+  private Area from;
+  private Area to;
 
-  public Door(String id) {
+  public Door(String id, Area from, Area to) {
     this.id = id;
-    closed = true;
+    this.from = from;
+    this.to = to;
+    this.closed = true;
     this.state = new Locked(this);
-
   }
 
   public void processRequest(RequestReader request) {
