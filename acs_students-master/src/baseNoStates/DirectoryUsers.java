@@ -15,32 +15,21 @@ public final class DirectoryUsers {
     //TODO: make user groups according to the specifications in the comments, because
     // now all are the same
 
-    // Users sense privilegis
-    // No tenen cap espai autoritzat
     users.add(new User("Bernat", "12345", new ArrayList<>()));
     users.add(new User("Blai", "77532", new ArrayList<>()));
 
-    // Employees
-    // Accés: ground floor, floor1, exterior, stairs
     List<Space> employeeSpaces = Arrays.asList(
         (Space) DirectoryAreas.findAreaById("hall"),
         (Space) DirectoryAreas.findAreaById("room1"),
         (Space) DirectoryAreas.findAreaById("room2"),
-        (Space) DirectoryAreas.findAreaById("room3"),
-        (Space) DirectoryAreas.findAreaById("corridor"),
-        (Space) DirectoryAreas.findAreaById("IT")
+        (Space) DirectoryAreas.findAreaById("corridor")
     );
     users.add(new User("Ernest", "74984", new ArrayList<>(employeeSpaces)));
     users.add(new User("Eulalia", "43295", new ArrayList<>(employeeSpaces)));
 
-    // Managers
-    // Accés a tots els espais
-    List<Space> allSpaces = DirectoryAreas.getAllSpaces(); // funció que retorna tots els Space
+    List<Space> allSpaces = DirectoryAreas.getAllSpaces();
     users.add(new User("Manel", "95783", new ArrayList<>(allSpaces)));
     users.add(new User("Marta", "05827", new ArrayList<>(allSpaces)));
-
-    // Admin
-    // Accés complet també
     users.add(new User("Ana", "11343", new ArrayList<>(allSpaces)));
   }
 

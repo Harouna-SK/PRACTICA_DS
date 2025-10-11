@@ -9,6 +9,7 @@ import org.json.JSONObject;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class RequestArea implements Request {
@@ -70,7 +71,7 @@ public class RequestArea implements Request {
     // commented out until Area, Space and Partition are implemented
     // make the door requests and put them into the area request to be authorized later and
     // processed later
-    Area area = DirectoryAreas.findAreaById(areaId);
+    /*Area area = DirectoryAreas.findAreaById(areaId);
     // an Area is a Space or a Partition
     if (area != null) {
       // is null when from the app we click on an action but no place is selected because
@@ -85,6 +86,32 @@ public class RequestArea implements Request {
         // to each individual door request, that is read by the simulator/Flutter app
         requests.add(requestReader);
       }
+    }*/
+    //Buscar l’àrea corresponent
+    Area area = DirectoryAreas.findAreaById(areaId);
+
+    if (area == null) {
+      System.out.println("Area with id " + areaId + " not found");
+      return;
+    }
+
+    //Obtenir totes les portes que donen accés a aquesta àrea
+    List<Door> doors = area.getDoorsGivingAccess();
+
+    if (doors == null || doors.isEmpty()) {
+      System.out.println("No doors give access to area " + areaId);
+      return;
+    }
+
+    //Crear i processar una petició per cada porta
+    for (Door door : doors) {
+      RequestReader requestReader = new RequestReader(credential, action, now, door.getId());
+
+      // processa la petició del lector (autorització + acció)
+      requestReader.process();
+
+      // afegeix la resposta a la llista de sub-peticions
+      requests.add(requestReader);
     }
 
   }

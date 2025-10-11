@@ -26,19 +26,28 @@ public class DirectoryAreas {
     Space IT = new Space("IT", "...", floor1);
 
     // basement
-    Door d1 = new Door("D1", exterior, parking); // exterior, parking
-    Door d2 = new Door("D2", stairs, parking); // stairs, parking
+    Door d1 = new Door("D1", exterior, parking);
+    Door d2 = new Door("D2", stairs, parking);
+    parking.addDoor(d1);
+    parking.addDoor(d2);
 
-    // ground floor
-    Door d3 = new Door("D3", exterior, hall); // exterior, hall
-    Door d4 = new Door("D4", stairs, hall); // stairs, hall
-    Door d5 = new Door("D5", hall, room1); // hall, room1
-    Door d6 = new Door("D6", hall, room2); // hall, room2
+// ground floor
+    Door d3 = new Door("D3", exterior, hall);
+    Door d4 = new Door("D4", stairs, hall);
+    Door d5 = new Door("D5", hall, room1);
+    Door d6 = new Door("D6", hall, room2);
+    hall.addDoor(d3);
+    hall.addDoor(d4);
+    room1.addDoor(d5);
+    room2.addDoor(d6);
 
-    // first floor
-    Door d7 = new Door("D7", stairs, corridor); // stairs, corridor
-    Door d8 = new Door("D8", corridor, room3); // corridor, room3
-    Door d9 = new Door("D9", corridor, IT); // corridor, IT
+// first floor
+    Door d7 = new Door("D7", stairs, corridor);
+    Door d8 = new Door("D8", corridor, room3);
+    Door d9 = new Door("D9", corridor, IT);
+    corridor.addDoor(d7);
+    room3.addDoor(d8);
+    IT.addDoor(d9);
 
     allDoors = new ArrayList<>(Arrays.asList(d1, d2, d3, d4, d5, d6, d7, d8, d9));
     rootArea = building;
