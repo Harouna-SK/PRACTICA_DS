@@ -1,6 +1,12 @@
 package baseNoStates;
 
+import baseNoStates.spaces.DirectoryAreas;
+import baseNoStates.spaces.Space;
+
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 
 public final class DirectoryUsers {
   private static final ArrayList<User> users = new ArrayList<>();
@@ -9,34 +15,33 @@ public final class DirectoryUsers {
     //TODO: make user groups according to the specifications in the comments, because
     // now all are the same
 
-    // users without any privilege, just to keep temporally users instead of deleting them,
-    // this is to withdraw all permissions but still to keep user data to give back
-    // permissions later
-    users.add(new User("Bernat", "12345"));
-    users.add(new User("Blai", "77532"));
+    // Users sense privilegis
+    // No tenen cap espai autoritzat
+    users.add(new User("Bernat", "12345", new ArrayList<>()));
+    users.add(new User("Blai", "77532", new ArrayList<>()));
 
-    // employees :
-    // Sep. 1 this year to Mar. 1 next year
-    // week days 9-17h
-    // just shortly unlock
-    // ground floor, floor1, exterior, stairs (this, for all), that is, everywhere but the parking
-    users.add(new User("Ernest", "74984"));
-    users.add(new User("Eulalia", "43295"));
+    // Employees
+    // Accés: ground floor, floor1, exterior, stairs
+    List<Space> employeeSpaces = Arrays.asList(
+        (Space) DirectoryAreas.findAreaById("hall"),
+        (Space) DirectoryAreas.findAreaById("room1"),
+        (Space) DirectoryAreas.findAreaById("room2"),
+        (Space) DirectoryAreas.findAreaById("room3"),
+        (Space) DirectoryAreas.findAreaById("corridor"),
+        (Space) DirectoryAreas.findAreaById("IT")
+    );
+    users.add(new User("Ernest", "74984", new ArrayList<>(employeeSpaces)));
+    users.add(new User("Eulalia", "43295", new ArrayList<>(employeeSpaces)));
 
-    // managers :
-    // Sep. 1 this year to Mar. 1 next year
-    // week days + saturday, 8-20h
-    // all actions
-    // all spaces
-    users.add(new User("Manel", "95783"));
-    users.add(new User("Marta", "05827"));
+    // Managers
+    // Accés a tots els espais
+    List<Space> allSpaces = DirectoryAreas.getAllSpaces(); // funció que retorna tots els Space
+    users.add(new User("Manel", "95783", new ArrayList<>(allSpaces)));
+    users.add(new User("Marta", "05827", new ArrayList<>(allSpaces)));
 
-    // admin :
-    // always=Jan. 1 this year to 2100
-    // all days of the week
-    // all actions
-    // all spaces
-    users.add(new User("Ana", "11343"));
+    // Admin
+    // Accés complet també
+    users.add(new User("Ana", "11343", new ArrayList<>(allSpaces)));
   }
 
   public static User findUserByCredential(String credential) {

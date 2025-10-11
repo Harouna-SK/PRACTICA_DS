@@ -72,6 +72,13 @@ public class Door {
     return state.getName();
   }
 
+  public Area getTo() {
+    return to;
+  }
+  public Area getFrom() {
+    return from;
+  }
+
   @Override
   public String toString() {
     return "Door{"

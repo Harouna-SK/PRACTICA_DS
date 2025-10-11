@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public final class DirectoryDoors {
-  private static ArrayList<Door> allDoors;
+  /*private static ArrayList<Door> allDoors;
 
   public static void makeDoors() {
     // basement
@@ -39,6 +39,6 @@ public final class DirectoryDoors {
   public static ArrayList<Door> getAllDoors() {
     System.out.println(allDoors);
     return allDoors;
-  }
+  }*/
 
 }

@@ -3,6 +3,7 @@ package baseNoStates.spaces;
 import baseNoStates.Door;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class DirectoryAreas {
   private static Area rootArea;
@@ -40,6 +41,7 @@ public class DirectoryAreas {
     Door d9 = new Door("D9", corridor, IT); // corridor, IT
 
     allDoors = new ArrayList<>(Arrays.asList(d1, d2, d3, d4, d5, d6, d7, d8, d9));
+    rootArea = building;
 
   }
 
@@ -63,6 +65,14 @@ public class DirectoryAreas {
   public static ArrayList<Door> getAllDoors() {
     System.out.println(allDoors);
     return allDoors;
+  }
+
+  public static List<Space> getAllSpaces() {
+    if (rootArea == null) {
+      System.out.println("Root area not initialized. Call makeAreas() first.");
+      return new ArrayList<>();
+    }
+    return rootArea.getSpaces();
   }
 
 }

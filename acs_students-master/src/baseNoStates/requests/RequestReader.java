@@ -7,6 +7,7 @@ import baseNoStates.User;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
+import baseNoStates.spaces.DirectoryAreas;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -78,7 +79,7 @@ public class RequestReader implements Request {
   // if authorized, perform the action.
   public void process() {
     User user = DirectoryUsers.findUserByCredential(credential);
-    Door door = DirectoryDoors.findDoorById(doorId);
+    Door door = DirectoryAreas.findDoorById(doorId);
     assert door != null : "door " + doorId + " not found";
     authorize(user, door);
     // this sets the boolean authorize attribute of the request
@@ -94,12 +95,20 @@ public class RequestReader implements Request {
     if (user == null) {
       authorized = false;
       addReason("user doesn't exists");
-    } else {
-
-      //TODO: get the who, where, when and what in order to decide, and if not
-      // authorized add the reason(s)
-      user.getCredential();
-      authorized = true;
+    }else{
+      var targetSpace = door.getTo(); // espai on vol accedir
+      if (targetSpace == null) {
+        authorized = false;
+        addReason("Door has no target space");
+        return;
+      }
+      // Comprovar si l’usuari pot estar en aquest espai
+      if (user.canBeInSpace(targetSpace)) {
+        authorized = true;
+      } else {
+        authorized = false;
+        addReason("User not authorized to access space " + targetSpace.getId());
+      }
     }
   }
 }

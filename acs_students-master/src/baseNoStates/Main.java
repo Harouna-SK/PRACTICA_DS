@@ -6,12 +6,13 @@ package baseNoStates;
 import baseNoStates.requests.Request;
 import baseNoStates.requests.RequestArea;
 import baseNoStates.requests.RequestReader;
+import baseNoStates.spaces.DirectoryAreas;
 
 import java.time.LocalDateTime;
 
 public class Main {
   public static void main(String[] args) {
-    DirectoryDoors.makeDoors();
+    DirectoryAreas.makeAreas();
     DirectoryUsers.makeUsers();
     new WebServer();
   }
