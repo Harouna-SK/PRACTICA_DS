@@ -13,14 +13,14 @@ public class DirectoryAreas {
     Partition building = new Partition("building", "...", null);
     Partition basement = new Partition("basement", "...", building);
     Partition exterior = new Partition("exterior", "...", building);
-    Partition groundfloor = new Partition("groundfloor", "...", building);
+    Partition ground_floor = new Partition("ground_floor", "...", building);
     Partition floor1 = new Partition("floor1", "...", building);
     Partition stairs = new Partition("stairs", "...", building);
 
     Space parking = new Space("parking", "...", basement);
-    Space hall  = new Space("hall", "...", groundfloor);
-    Space room1 = new Space("room1", "...", groundfloor);
-    Space room2 = new Space("room2", "...", groundfloor);
+    Space hall  = new Space("hall", "...", ground_floor);
+    Space room1 = new Space("room1", "...", ground_floor);
+    Space room2 = new Space("room2", "...", ground_floor);
     Space room3 = new Space("room3", "...", floor1);
     Space corridor = new Space("corridor", "...", floor1);
     Space IT = new Space("IT", "...", floor1);
