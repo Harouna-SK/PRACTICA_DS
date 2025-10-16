@@ -7,13 +7,14 @@ import java.util.List;
 public class User {
   private final String name;
   private final String credential;
+  private final Group group;
   private List<Space> authorizedSpaces;
 
   public User(String name, String credential, List<Space> authorizedSpaces, Group group) {
     this.name = name;
     this.credential = credential;
     this.authorizedSpaces = authorizedSpaces;
-    this.group = group
+    this.group = group;
   }
 
   public String getCredential() {
@@ -22,7 +23,7 @@ public class User {
 
   @Override
   public String toString() {
-    return "User{name=" + name + ", credential=" + credential + ", group=" + group.getName()"}";
+    return "User{name=" + name + ", credential=" + credential + ", group=" + group.getName() + "}";
   }
 
   public Group getGroup(){

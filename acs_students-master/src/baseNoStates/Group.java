@@ -24,8 +24,7 @@ public class Group {
   public Schedule getSchedule() { return schedule; }
 
   public boolean canPerform(String action, Space space, LocalDateTime dateTime) {
-    return allowedActions.contains(action)
-        && allowedSpaces.contains(space)
-        && schedule.isWithinSchedule(dateTime);
+    if (schedule == null) { return false; } // caso 'Blank' schedule
+    return allowedActions.contains(action) && allowedSpaces.contains(space) && schedule.isWithinSchedule(dateTime);
   }
 }
