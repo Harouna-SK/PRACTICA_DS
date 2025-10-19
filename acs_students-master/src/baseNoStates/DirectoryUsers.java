@@ -12,7 +12,6 @@ import java.util.*;
 
 public final class DirectoryUsers {
   private static final ArrayList<User> users = new ArrayList<>();
-  private static final ArrayList<Group> groups = new ArrayList<>();
 
   public static void makeUsers() {
     //TODO: make user groups according to the specifications in the comments, because
