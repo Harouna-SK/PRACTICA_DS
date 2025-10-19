@@ -1,4 +1,3 @@
-// --- Group.java ---
 package baseNoStates;
 
 import baseNoStates.spaces.Space;
