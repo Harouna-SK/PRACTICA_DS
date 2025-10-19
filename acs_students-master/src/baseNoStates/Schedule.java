@@ -1,4 +1,3 @@
-// --- Schedule.java ---
 package baseNoStates;
 
 import java.time.*;
@@ -24,7 +23,7 @@ public class Schedule {
     LocalTime time = dateTime.toLocalTime();
     /*
     Se comprueba si la fecha es igual o despues de la fecha de inicio
-    si la fecha es igual o antes de la fecha de fin
+    si la fecha es igual o antes de la fecha de fin, si el dia es valido y si la hora es valida
     */
    
     return (date.isEqual(startDate) || date.isAfter(startDate)) && (date.isEqual(endDate) || date.isBefore(endDate)) && validDays.contains(dateTime.getDayOfWeek()) && !time.isBefore(startHour) && !time.isAfter(endHour);
