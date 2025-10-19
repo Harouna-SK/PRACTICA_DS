@@ -91,6 +91,7 @@ public class RequestReader implements Request {
 
   // the result is put into the request object plus, if not authorized, why not,
   // only for testing
+  /*
   private void authorize(User user, Door door) {
     if (user == null) {
       authorized = false;
@@ -113,3 +114,40 @@ public class RequestReader implements Request {
   }
 }
 
+*/
+
+private void authorize(User user, Door door) {
+    if (user == null) {
+        authorized = false;
+        addReason("User doesn't exist");
+        return;
+    }
+
+    var targetSpace = door.getTo(); // area a la que da acceso la puerta
+
+    boolean canPerform = user.getGroup().canPerform(action, targetSpace, now);
+
+    if (canPerform) {
+        authorized = true;
+        userName = user.toString();
+    } else {
+        authorized = false;
+
+        // verificar que permiso no se ha cumplido
+        var group = user.getGroup();
+
+        if (!group.getAllowedActions().contains(action)) {
+            addReason("Action '" + action + "' not allowed for group " + group.getName());
+        }
+        if (!group.getAllowedSpaces().contains(targetSpace)) {
+            addReason("Space '" + targetSpace.getId() + "' not allowed for group " + group.getName());
+        }
+        if (group.getSchedule() == null) {
+            addReason("Group has no schedule");
+        } else if (!group.getSchedule().isWithinSchedule(now)) {
+            addReason("Current date/time not within schedule for group " + group.getName());
+        }
+    }
+
+  }
+}
