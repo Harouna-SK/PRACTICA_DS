@@ -2,6 +2,7 @@
 package baseNoStates;
 
 import baseNoStates.spaces.Space;
+import baseNoStates.spaces.Area;
 import java.time.*;
 import java.util.*;
 
@@ -23,8 +24,10 @@ public class Group {
   public ArrayList<Space> getAllowedSpaces() { return allowedSpaces; }
   public Schedule getSchedule() { return schedule; }
 
-  public boolean canPerform(String action, Space space, LocalDateTime dateTime) {
-    if (schedule == null) { return false; } // caso 'Blank' schedule
-    return allowedActions.contains(action) && allowedSpaces.contains(space) && schedule.isWithinSchedule(dateTime);
+  public boolean canPerform(String action, Area area, LocalDateTime dateTime) {
+    if (schedule == null) {
+      return false; 
+    } // caso 'Blank' schedule
+    return allowedActions.contains(action) && allowedSpaces.contains(area) && schedule.isWithinSchedule(dateTime);
   }
 }

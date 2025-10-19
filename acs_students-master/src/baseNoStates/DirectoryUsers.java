@@ -51,7 +51,7 @@ public final class DirectoryUsers {
     users.add(new User("Ernest", "74984", new ArrayList<>(employeeSpaces), employee));
     users.add(new User("Eulalia", "43295", new ArrayList<>(employeeSpaces), employee));
 
-    users.add(new User("Manel", "95783", new ArrayList<>(allSpaces), admin));
+    users.add(new User("Manel", "95783", new ArrayList<>(allSpaces), manager));
     users.add(new User("Marta", "05827", new ArrayList<>(allSpaces), admin));
     users.add(new User("Ana", "11343", new ArrayList<>(allSpaces), admin));
     /*

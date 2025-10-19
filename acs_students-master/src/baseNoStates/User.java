@@ -30,6 +30,9 @@ public class User {
     return group;
   }
 
+  public String getName(){
+    return name;
+  }
   public boolean canBeInSpace(Area s) {
     for (Space space : authorizedSpaces) {
       List<Space> spaces = space.getSpaces();
