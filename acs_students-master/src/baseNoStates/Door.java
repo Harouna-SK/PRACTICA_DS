@@ -59,6 +59,7 @@ public class Door implements ClockObserver { // use of ClockObserver
                 break;
             default:
                 System.out.println("Unknown action: " + action);
+                break;
         }
     }
 
