@@ -4,10 +4,12 @@ import baseNoStates.Door;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class DirectoryAreas {
   private static Area rootArea;
   private static ArrayList<Door> allDoors;
+  private static Logger logger;
 
   public static void makeAreas(){
     Partition building = new Partition("building", "...", null);
@@ -66,7 +68,8 @@ public class DirectoryAreas {
         return door;
       }
     }
-    System.out.println("door with id " + id + " not found");
+    //System.out.println("door with id " + id + " not found");
+    logger.warning("No Door found with id " + id);
     return null; // otherwise we get a Java error
   }
 
