@@ -35,6 +35,7 @@ public class User {
   }
   public boolean canBeInSpace(Area s) {
     for (Space space : authorizedSpaces) {
+      //ARREGLAR EL .getSpaces() amb el visitor
       List<Space> spaces = space.getSpaces();
 
       if (spaces.contains(s)) {

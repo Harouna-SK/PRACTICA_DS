@@ -1,7 +1,6 @@
 package baseNoStates.spaces;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import baseNoStates.Door;
 
@@ -16,19 +15,13 @@ public class Space extends Area {
     doors.add(door);
   }
 
-  @Override
-  public Area findAreaById(String id) {
-    return this.id.equals(id) ? this : null;
-  }
-
-  @Override
-  public List<Door> getDoorsGivingAccess() {
+  // Este getter lo usa el visitor DoorsVisitor
+  public List<Door> getDoors() {
     return new ArrayList<>(doors);
   }
 
   @Override
-  public List<Space> getSpaces() {
-    return new ArrayList<>(Arrays.asList(this));
+  public <T> T accept(VisitorAreas<T> visitor) {
+    return visitor.visitSpace(this);
   }
 }
-

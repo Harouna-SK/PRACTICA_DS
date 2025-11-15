@@ -59,7 +59,7 @@ public class DirectoryAreas {
   // Busca un área por su id dentro del árbol
   public static Area findAreaById(String id) {
     if (rootArea == null) return null;
-    return rootArea.findAreaById(id);
+    return rootArea.accept(new FindAreaVisitor(id));
   }
 
   public static Door findDoorById(String id) {
@@ -84,7 +84,7 @@ public class DirectoryAreas {
       System.out.println("Root area not initialized. Call makeAreas() first.");
       return new ArrayList<>();
     }
-    return rootArea.getSpaces();
+    return rootArea.accept(new GetSpaceVisitor());
   }
 
 }

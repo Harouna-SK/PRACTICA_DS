@@ -1,9 +1,9 @@
 package baseNoStates.spaces;
+
 import java.util.ArrayList;
 import java.util.List;
-import baseNoStates.Door;
 
-public class Partition extends Area{
+public class Partition extends Area {
   private List<Area> subAreas = new ArrayList<>();
 
   public Partition(String id, String description, Partition parent) {
@@ -14,31 +14,12 @@ public class Partition extends Area{
     subAreas.add(area);
   }
 
-  @Override
-  public Area findAreaById(String id) {
-    if (this.id.equals(id)) return this;
-    for (Area sub : subAreas) {
-      Area found = sub.findAreaById(id);
-      if (found != null) return found;
-    }
-    return null;
+  public List<Area> getSubAreas() {
+    return subAreas;
   }
 
   @Override
-  public List<Door> getDoorsGivingAccess() {
-    List<Door> doors = new ArrayList<>();
-    for (Area sub : subAreas) {
-      doors.addAll(sub.getDoorsGivingAccess());
-    }
-    return doors;
-  }
-
-  @Override
-  public List<Space> getSpaces() {
-    List<Space> spaces = new ArrayList<>();
-    for (Area sub : subAreas) {
-      spaces.addAll(sub.getSpaces());
-    }
-    return spaces;
+  public <T> T accept(VisitorAreas<T> visitor) {
+    return visitor.visitPartition(this);
   }
 }

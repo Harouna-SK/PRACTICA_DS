@@ -17,8 +17,9 @@ public abstract class Area {
     }
   }
 
-    public String getId() { return id; }
-    public abstract Area findAreaById(String id);
-    public abstract List<Door> getDoorsGivingAccess();
-    public abstract List<Space> getSpaces();
+  public String getId() {return id;}
+  public Partition getParent() {return parent;}
+
+  //visitor pattern
+  public abstract <T> T accept(VisitorAreas<T> visitor);
 }
