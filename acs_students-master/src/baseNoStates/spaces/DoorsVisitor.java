@@ -8,7 +8,7 @@ public class DoorsVisitor implements VisitorAreas<List<Door>> {
 
   @Override
   public List<Door> visitSpace(Space s) {
-    return s.getDoorsGivingAccess();
+    return s.getDoors();
   }
 
   @Override

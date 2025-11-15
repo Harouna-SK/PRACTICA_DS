@@ -1,6 +1,7 @@
 package baseNoStates;
 
 import baseNoStates.spaces.Area;
+import baseNoStates.spaces.GetSpaceVisitor;
 import baseNoStates.spaces.Space;
 import java.util.List;
 
@@ -35,8 +36,7 @@ public class User {
   }
   public boolean canBeInSpace(Area s) {
     for (Space space : authorizedSpaces) {
-      //ARREGLAR EL .getSpaces() amb el visitor
-      List<Space> spaces = space.getSpaces();
+      List<Space> spaces = space.accept(new GetSpaceVisitor());
 
       if (spaces.contains(s)) {
         return true;

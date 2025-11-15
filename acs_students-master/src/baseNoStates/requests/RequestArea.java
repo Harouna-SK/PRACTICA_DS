@@ -4,6 +4,7 @@ import baseNoStates.Actions;
 import baseNoStates.Door;
 import baseNoStates.spaces.Area;
 import baseNoStates.spaces.DirectoryAreas;
+import baseNoStates.spaces.DoorsVisitor;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -95,7 +96,7 @@ public class RequestArea implements Request {
     }
 
     //Obtenir totes les portes que donen accés a aquesta àrea
-    List<Door> doors = area.getDoorsGivingAccess();
+    List<Door> doors = area.accept(new DoorsVisitor());
 
     if (doors == null || doors.isEmpty()) {
       System.out.println("No doors give access to area " + areaId);
