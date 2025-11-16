@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- console appender -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss} %-5level [%logger{20}] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- logfile -->
+    <appender name="DEBUG_FILE" class="ch.qos.logback.core.FileAppender">
+        <file>debug.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d %-5level [%logger] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- activity.log -->
+    <appender name="ACTIVITY_FILE" class="ch.qos.logback.core.FileAppender">
+        <!-- <file>activity.log</file> -->
+        <file>/home/usuario/PRACTICA_DS/acs_students-master/activity.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d [%logger] %msg%n</pattern>
+        </encoder>
+
+        <filter class="ch.qos.logback.classic.filter.MarkerFilter">
+            <marker>ACTIVITY</marker>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+
+    <!-- logs primer milestone -->
+    
+    <!--
+    <logger name="baseNoStates.spaces" level="DEBUG"/>
+    <logger name="baseNoStates.requests" level="DEBUG"/>
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="DEBUG_FILE"/>
+        <appender-ref ref="ACTIVITY_FILE"/>
+    </root>
+    -->
+
+    <!-- logs segundo milestone -->
+
+    <!--
+    <logger name="baseNoStates.Group" level="DEBUG"/>
+    <logger name="baseNoStates.Schedule" level="DEBUG"/>
+    <logger name="baseNoStates.DirectoryUsers" level="DEBUG"/>
+    <logger name="baseNoStates.Door" level="DEBUG"/>
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="DEBUG_FILE"/>
+        <appender-ref ref="ACTIVITY_FILE"/>
+    </root>
+    -->
+
+    <!-- todos los logs -->
+    <root level="DEBUG">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="DEBUG_FILE"/>
+        <appender-ref ref="ACTIVITY_FILE"/>
+    </root>
+
+</configuration>

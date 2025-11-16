@@ -8,6 +8,11 @@ import baseNoStates.clock.ClockObserver;
 import org.json.JSONObject;
 import java.time.LocalDateTime;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Marker;
+import org.slf4j.MarkerFactory;
+
 
 public class Door implements ClockObserver { // use of ClockObserver
     private final String id;
@@ -19,6 +24,9 @@ public class Door implements ClockObserver { // use of ClockObserver
     //new atributes for the clock
     private LocalDateTime checkAt = null;
     private boolean waitingForAutoLock = false;
+
+    private static final Logger LOG = LoggerFactory.getLogger(RequestReader.class);
+    private static final Marker ACTIVITY = MarkerFactory.getMarker("ACTIVITY");
 
     public Door(String id, Area from, Area to) {
         this.id = id;
@@ -35,7 +43,8 @@ public class Door implements ClockObserver { // use of ClockObserver
             String action = request.getAction();
             doAction(action);
         } else {
-            System.out.println("not authorized");
+            // System.out.println("not authorized");
+            LOG.warn("Request not authorized");
         }
         request.setDoorStateName(getStateName());
     }
@@ -58,7 +67,8 @@ public class Door implements ClockObserver { // use of ClockObserver
                 state.unlockShortly(); // new call
                 break;
             default:
-                System.out.println("Unknown action: " + action);
+                // System.out.println("Unknown action: " + action);
+                LOG.warn("Unknown action: {}", action);
         }
     }
 
@@ -70,7 +80,8 @@ public class Door implements ClockObserver { // use of ClockObserver
             this.waitingForAutoLock = true;
             this.checkAt = LocalDateTime.now().plusSeconds(10);
             Clock.getInstance().registerObserver(this);
-            System.out.println("Door " + id + " will auto-check in 10s");
+            // System.out.println("Door " + id + " will auto-check in 10s");
+            LOG.debug("Door {} will auto-check in 10s", id);
         } else {
             // if not, we don't use it
             this.waitingForAutoLock = false;
@@ -111,10 +122,12 @@ public class Door implements ClockObserver { // use of ClockObserver
             // after 10 seconds
             if (isClosed()) {
                 setState(new Locked(this));
-                System.out.println("Door " + id + " auto-locked after 10s");
+                // System.out.println("Door " + id + " auto-locked after 10s");
+                LOG.info("Door {} auto-locked after 10s", id);
             } else {
                 setState(new Propped(this));
-                System.out.println("Door " + id + " became propped after 10s");
+                // System.out.println("Door " + id + " became propped after 10s");
+                LOG.info("Door {} became propped after 10s", id);
             }
             waitingForAutoLock = false;
             Clock.getInstance().unregisterObserver(this);

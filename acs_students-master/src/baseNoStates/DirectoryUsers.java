@@ -2,6 +2,7 @@ package baseNoStates;
 
 import baseNoStates.spaces.DirectoryAreas;
 import baseNoStates.spaces.Space;
+import baseNoStates.requests.RequestReader;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,9 +10,16 @@ import java.util.List;
 import java.time.*;
 import java.util.*;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Marker;
+import org.slf4j.MarkerFactory;
+
 
 public final class DirectoryUsers {
   private static final ArrayList<User> users = new ArrayList<>();
+  private static final Logger LOG = LoggerFactory.getLogger(RequestReader.class);
+  private static final Marker ACTIVITY = MarkerFactory.getMarker("ACTIVITY");
 
   public static void makeUsers() {
     //TODO: make user groups according to the specifications in the comments, because
@@ -70,7 +78,8 @@ public final class DirectoryUsers {
         return user;
       }
     }
-    System.out.println("user with credential " + credential + " not found");
+    // System.out.println("user with credential " + credential + " not found");
+    LOG.warn("User with credential {} not found", credential);
     return null; // otherwise we get a Java error
   }
 
