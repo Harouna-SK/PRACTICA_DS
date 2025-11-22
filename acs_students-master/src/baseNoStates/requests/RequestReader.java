@@ -11,6 +11,11 @@ import baseNoStates.spaces.DirectoryAreas;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Marker;
+import org.slf4j.MarkerFactory;
+
 public class RequestReader implements Request {
   private final String credential; // who
   private final String action;     // what
@@ -21,13 +26,22 @@ public class RequestReader implements Request {
   private final ArrayList<String> reasons; // why not authorized
   private String doorStateName;
   private boolean doorClosed;
-
+  private static final Logger LOG = LoggerFactory.getLogger(RequestReader.class);
   public RequestReader(String credential, String action, LocalDateTime now, String doorId) {
+    LOG.debug("Initializing RequestReader object with credentials {} action {} doorId {} now {}", credential, action, doorId, now);
     this.credential = credential;
     this.action = action;
     this.doorId = doorId;
     reasons = new ArrayList<>();
     this.now = now;
+  }
+
+  public String getCredential(){
+    return credential;
+  }
+
+  public LocalDateTime getNow(){
+    return now;
   }
 
   public void setDoorStateName(String name) {
@@ -72,6 +86,7 @@ public class RequestReader implements Request {
     json.put("closed", doorClosed);
     json.put("state", doorStateName);
     json.put("reasons", new JSONArray(reasons));
+    LOG.debug("JSONObject created");
     return json;
   }
 
@@ -120,8 +135,10 @@ private void authorize(User user, Door door) {
     if (user == null) {
         authorized = false;
         addReason("User doesn't exist");
+        LOG.debug("User does not exist");
         return;
     }
+    LOG.debug("Proceesing request for user {} and door {}", user.getCredential(), door.getId());
 
     var targetSpace = door.getTo(); // area a la que da acceso la puerta
 
@@ -138,14 +155,18 @@ private void authorize(User user, Door door) {
 
         if (!group.getAllowedActions().contains(action)) {
             addReason("Action '" + action + "' not allowed for group " + group.getName());
+            LOG.debug("Action '" + action + "' not allowed for group " + group.getName());
         }
         if (!group.getAllowedSpaces().contains(targetSpace)) {
             addReason("Space '" + targetSpace.getId() + "' not allowed for group " + group.getName());
+            LOG.debug("Space '" + targetSpace.getId() + "' not allowed for group " + group.getName());
         }
         if (group.getSchedule() == null) {
             addReason("Group has no schedule");
+            LOG.debug("Group has no schedule");
         } else if (!group.getSchedule().isWithinSchedule(now)) {
             addReason("Current date/time not within schedule for group " + group.getName());
+            LOG.debug("Current date/time not within schedule for group " + group.getName());
         }
     }
 

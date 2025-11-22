@@ -12,6 +12,10 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Marker;
+import org.slf4j.MarkerFactory;
 
 public class RequestArea implements Request {
   private final String credential;
@@ -19,7 +23,7 @@ public class RequestArea implements Request {
   private final String areaId;
   private final LocalDateTime now;
   private ArrayList<RequestReader> requests = new ArrayList<>();
-
+  private static final Logger LOG = LoggerFactory.getLogger(RequestArea.class);
 
   public RequestArea(String credential, String action, LocalDateTime now, String areaId) {
     this.credential = credential;
@@ -28,6 +32,7 @@ public class RequestArea implements Request {
             : "invalid action " + action + " for an area request";
     this.action = action;
     this.now = now;
+    LOG.debug("Initialized RequestArea object with credential {} action {} now {} areaId {}", credential, action, now, areaId);
   }
 
   public String getAction() {
@@ -88,10 +93,11 @@ public class RequestArea implements Request {
       }
     }*/
     //Buscar l’àrea corresponent
+    LOG.debug("Searchig for area {}", areaId);
     Area area = DirectoryAreas.findAreaById(areaId);
 
     if (area == null) {
-      System.out.println("Area with id " + areaId + " not found");
+      LOG.debug("Area with id " + areaId + " not found");
       return;
     }
 
@@ -99,7 +105,7 @@ public class RequestArea implements Request {
     List<Door> doors = area.accept(new DoorsVisitor());
 
     if (doors == null || doors.isEmpty()) {
-      System.out.println("No doors give access to area " + areaId);
+      LOG.debug("No doors give access to area " + areaId);
       return;
     }
 
@@ -113,6 +119,6 @@ public class RequestArea implements Request {
       // afegeix la resposta a la llista de sub-peticions
       requests.add(requestReader);
     }
-
+    LOG.debug("Area {} processed succesfully",areaId);
   }
 }

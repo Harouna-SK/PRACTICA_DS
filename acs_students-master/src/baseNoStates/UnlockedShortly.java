@@ -1,43 +1,51 @@
 package baseNoStates;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Marker;
+import org.slf4j.MarkerFactory;
+import org.slf4j.MDC;
+
 public class UnlockedShortly extends DoorState {
+    private static final Logger LOG = LoggerFactory.getLogger(UnlockedShortly.class);
 
     public UnlockedShortly(Door door) {
         super(door, "unlocked_shortly");
+        LOG.debug("UnlockedShortly object initialized calling DoorState constructor");
     }
 
     @Override
     public void open() {
         if (door.isClosed()) {
             door.setClosed(false);
-            System.out.println("Door " + door.getId() + " opened (was unlocked shortly)");
+            LOG.debug("Door " + door.getId() + " opened (was unlocked shortly)");
         } else {
-            System.out.println("Can't open door " + door.getId() + " because it's already open");
+            LOG.debug("Can't open door " + door.getId() + " because it's already open");
         }
     }
 
     @Override
     public void close() {
         if (door.isClosed()) {
-            System.out.println("Can't close door " + door.getId() + " because it's already closed");
+            LOG.debug("Can't close door " + door.getId() + " because it's already closed");
         } else {
             door.setClosed(true);
-            System.out.println("Door " + door.getId() + " closed (was unlocked shortly)");
+            LOG.debug("Door " + door.getId() + " closed (was unlocked shortly)");
         }
     }
 
     @Override
     public void lock() {
-        System.out.println("Can't lock door " + door.getId() + " when in unlocked shortly state");
+        LOG.debug("Can't lock door " + door.getId() + " when in unlocked shortly state");
     }
 
     @Override
     public void unlock() {
-        System.out.println("Can't unlock door " + door.getId() + " when in unlocked shortly state");
+        LOG.debug("Can't unlock door " + door.getId() + " when in unlocked shortly state");
     }
 
     @Override
     public void unlockShortly() {
-        System.out.println("Door " + door.getId() + " is already in unlocked shortly state");
+        LOG.debug("Door " + door.getId() + " is already in unlocked shortly state");
     }
 }

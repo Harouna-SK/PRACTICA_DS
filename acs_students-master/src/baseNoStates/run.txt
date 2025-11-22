@@ -1,0 +1,8 @@
+compile: 
+javac -cp "lib/*" -d bin $(find src -name "*.java")
+
+run:
+java -cp "bin:lib/*" baseNoStates.Main
+
+run with logback in /src
+java -Dlogback.configurationFile=src/logback.xml -cp "bin:lib/*" baseNoStates.Main

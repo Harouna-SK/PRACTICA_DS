@@ -8,6 +8,11 @@ import baseNoStates.clock.ClockObserver;
 import org.json.JSONObject;
 import java.time.LocalDateTime;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Marker;
+import org.slf4j.MarkerFactory;
+import org.slf4j.MDC;
 
 public class Door implements ClockObserver { // use of ClockObserver
     private final String id;
@@ -20,6 +25,12 @@ public class Door implements ClockObserver { // use of ClockObserver
     private LocalDateTime checkAt = null;
     private boolean waitingForAutoLock = false;
 
+    private static final Logger LOG = LoggerFactory.getLogger(Door.class);
+    private static final Marker ACTIVITY = MarkerFactory.getMarker("ACTIVITY");
+
+    private static final Marker PRIMERA_ENTREGA = MarkerFactory.getMarker("PRIMERA_ENTREGA");
+    private static final Marker SEGUNDA_ENTREGA = MarkerFactory.getMarker("SEGUNDA_ENTREGA");
+
     public Door(String id, Area from, Area to) {
         this.id = id;
         this.from = from;
@@ -31,16 +42,21 @@ public class Door implements ClockObserver { // use of ClockObserver
     public void processRequest(RequestReader request) {
         // it is the Door that process the request because the door has and knows
         // its state, and if closed or open
+        LOG.info(ACTIVITY, "User with id {} trying to {} door {} at {}", request.getCredential(), request.getAction(), getId(), request.getNow());
         if (request.isAuthorized()) {
+            LOG.info(ACTIVITY, "Request authorized");
             String action = request.getAction();
             doAction(action);
+            LOG.info(ACTIVITY, "Action done");
         } else {
-            System.out.println("not authorized");
+            // System.out.println("not authorized");
+            LOG.warn(ACTIVITY, "Request not authorized");
         }
         request.setDoorStateName(getStateName());
     }
 
     private void doAction(String action) {
+        LOG.debug("Doing action {}", action);
         switch (action) {
             case Actions.OPEN:
                 state.open();
@@ -58,8 +74,12 @@ public class Door implements ClockObserver { // use of ClockObserver
                 state.unlockShortly(); // new call
                 break;
             default:
+<<<<<<< HEAD
                 System.out.println("Unknown action: " + action);
                 break;
+=======
+                LOG.warn(ACTIVITY, "Unknown action: {}", action);
+>>>>>>> 2773080 (LOGGER implemented without selecting milestone logs)
         }
     }
 
@@ -71,7 +91,7 @@ public class Door implements ClockObserver { // use of ClockObserver
             this.waitingForAutoLock = true;
             this.checkAt = LocalDateTime.now().plusSeconds(10);
             Clock.getInstance().registerObserver(this);
-            System.out.println("Door " + id + " will auto-check in 10s");
+            LOG.debug("Door " + id + " will auto-check in 10s");
         } else {
             // if not, we don't use it
             this.waitingForAutoLock = false;
@@ -112,10 +132,10 @@ public class Door implements ClockObserver { // use of ClockObserver
             // after 10 seconds
             if (isClosed()) {
                 setState(new Locked(this));
-                System.out.println("Door " + id + " auto-locked after 10s");
+                LOG.debug("Door " + id + " auto-locked after 10s");
             } else {
                 setState(new Propped(this));
-                System.out.println("Door " + id + " became propped after 10s");
+                LOG.debug("Door " + id + " became propped after 10s");
             }
             waitingForAutoLock = false;
             Clock.getInstance().unregisterObserver(this);

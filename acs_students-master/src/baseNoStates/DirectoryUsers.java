@@ -9,14 +9,22 @@ import java.util.List;
 import java.time.*;
 import java.util.*;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Marker;
+import org.slf4j.MarkerFactory;
+import org.slf4j.MDC;
+
 
 public final class DirectoryUsers {
   private static final ArrayList<User> users = new ArrayList<>();
+  private static final Logger LOG = LoggerFactory.getLogger(DirectoryUsers.class);
+  private static final Marker ACTIVITY = MarkerFactory.getMarker("ACTIVITY");
 
   public static void makeUsers() {
     //TODO: make user groups according to the specifications in the comments, because
     // now all are the same
-    
+    LOG.debug("Initializing all users");
     // dias habiles
     List<DayOfWeek> allDays = Arrays.asList(DayOfWeek.values());
     List<DayOfWeek> weekDays = Arrays.asList(DayOfWeek.MONDAY, DayOfWeek.TUESDAY, DayOfWeek.WEDNESDAY, DayOfWeek.THURSDAY, DayOfWeek.FRIDAY);
@@ -65,12 +73,16 @@ public final class DirectoryUsers {
   }
 
   public static User findUserByCredential(String credential) {
+    LOG.debug("searching user with credentials {}", credential);
     for (User user : users) {
       if (user.getCredential().equals(credential)) {
+        LOG.debug("user with credentials {} found", credential);
         return user;
       }
     }
     System.out.println("user with credential " + credential + " not found");
+    // System.out.println("user with credential " + credential + " not found");
+    LOG.warn(ACTIVITY, "User with credential {} not found", credential);
     return null; // otherwise we get a Java error
   }
 
