@@ -17,11 +17,22 @@ import org.slf4j.MDC;
 
 
 public final class DirectoryUsers {
-  private static final ArrayList<User> users = new ArrayList<>();
+    private static DirectoryUsers instance;
+  private  final ArrayList<User> users = new ArrayList<>();
   private static final Logger LOG = LoggerFactory.getLogger(DirectoryUsers.class);
   private static final Marker ACTIVITY = MarkerFactory.getMarker("ACTIVITY");
 
-  public static void makeUsers() {
+    private DirectoryUsers() {
+    }
+
+    // 4. Método público para obtener la instancia
+    public static synchronized DirectoryUsers getInstance() {
+        if (instance == null) {
+            instance = new DirectoryUsers();
+        }
+        return instance;
+    }
+  public void makeUsers() {
     //TODO: make user groups according to the specifications in the comments, because
     // now all are the same
     LOG.debug("Initializing all users");
@@ -37,13 +48,13 @@ public final class DirectoryUsers {
     Schedule employeeSchedule = new Schedule(LocalDate.of(2025, 9, 1), LocalDate.of(2026, 3, 1), weekDays, LocalTime.of(8, 0), LocalTime.of(17, 0)); 
 
     // espacios
-    List<Space> allSpaces = DirectoryAreas.getAllSpaces();
-    List<Space> employeeSpaces = Arrays.asList(
-        (Space) DirectoryAreas.findAreaById("hall"),
-        (Space) DirectoryAreas.findAreaById("room1"),
-        (Space) DirectoryAreas.findAreaById("room2"),
-        (Space) DirectoryAreas.findAreaById("corridor")
-    );
+      List<Space> allSpaces = DirectoryAreas.getInstance().getAllSpaces();
+      List<Space> employeeSpaces = Arrays.asList(
+              (Space) DirectoryAreas.getInstance().findAreaById("hall"),
+              (Space) DirectoryAreas.getInstance().findAreaById("room1"),
+              (Space) DirectoryAreas.getInstance().findAreaById("room2"),
+              (Space) DirectoryAreas.getInstance().findAreaById("corridor")
+      );
 
     // grupos
     Group admin = new Group("Administrator", new ArrayList<>(Arrays.asList("open", "close", "lock", "unlock", "unlock_shortly")), new ArrayList<>(allSpaces), adminSchedule);
@@ -72,7 +83,7 @@ public final class DirectoryUsers {
     */
   }
 
-  public static User findUserByCredential(String credential) {
+  public User findUserByCredential(String credential) {
     LOG.debug("searching user with credentials {}", credential);
     for (User user : users) {
       if (user.getCredential().equals(credential)) {

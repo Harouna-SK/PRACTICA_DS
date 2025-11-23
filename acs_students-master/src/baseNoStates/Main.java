@@ -21,9 +21,9 @@ public class Main {
   private static final Logger LOG = LoggerFactory.getLogger(Main.class);
   public static void main(String[] args) {
       Clock.getInstance().start();
-    DirectoryAreas.makeAreas();
-    DirectoryUsers.makeUsers();
+      DirectoryAreas.getInstance().makeAreas();
+      DirectoryUsers.getInstance().makeUsers();
     LOG.debug("Starting webserver");
-    new WebServer();
+      WebServer.getInstance();
   }
 }
