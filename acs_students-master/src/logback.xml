@@ -40,31 +40,81 @@
     </appender>
 
 
-    <!-- logs primer milestone -->
-    
+    <!-- =============================================================== -->
+    <!-- CONFIGURACIONES SELECCIONABLES POR COMENTARIOS                   -->
+    <!-- =============================================================== -->
+
+    <!-- =============================================================== -->
+    <!--   MODO 1 → LOG SOLO MILESTONE 1                                 -->
+    <!--   (todos los ficheros excepto Group, Schedule, DirectoryUsers,  -->
+    <!--    Door — que se silencian)                                     -->
+    <!-- =============================================================== -->
+
     <!--
-    <logger name="baseNoStates.spaces" level="DEBUG"/>
-    <logger name="baseNoStates.requests" level="DEBUG"/>
+    <logger name="baseNoStates" level="DEBUG" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="DEBUG_FILE"/>
+    </logger>
+
+    <logger name="clase.patron.visitor1" level="OFF"/>
+    <logger name="clase.patron.visitor2" level="OFF"/>
+    <logger name="clase.patron.visitor3" level="OFF"/>
+    <logger name="clase.patron.visitor4" level="OFF"/>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="DEBUG_FILE"/>
+    </root>
+    -->
+
+
+
+    <!-- =============================================================== -->
+    <!--   MODO 2 → LOG SOLO MILESTONE 2                                 -->
+    <!--   (solo estas 4 clases loguean — el resto se silencian)         -->
+    <!-- =============================================================== -->
+
+    <!--
+    <logger name="baseNoStates" level="OFF"/>
+
+    <logger name="clase.patron.visitor1" level="DEBUG" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="DEBUG_FILE"/>
+    </logger>
+
+    <logger name="clase.patron.visitor2" level="DEBUG" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="DEBUG_FILE"/>
+    </logger>
+
+    <logger name="clase.patron.visitor3" level="DEBUG" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="DEBUG_FILE"/>
+        <appender-ref ref="ACTIVITY_FILE"/>
+    </logger>
+
+    <logger name="clase.patron.visitor4" level="DEBUG" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="DEBUG_FILE"/>
+    </logger>
+
+    <root level="OFF"/>
+    -->
+
+
+
+    <!-- =============================================================== -->
+    <!--   MODO 3 → LOG DE TODAS LAS CLASES                              -->
+    <!-- =============================================================== -->
+
+    <!--  DESCOMENTAR ESTE BLOQUE PARA LOG TOTAL -->
+    <logger name="baseNoStates" level="DEBUG"/>
+
     <root level="INFO">
         <appender-ref ref="CONSOLE"/>
         <appender-ref ref="DEBUG_FILE"/>
         <appender-ref ref="ACTIVITY_FILE"/>
     </root>
-    -->
-
-    <!-- logs segundo milestone -->
-
-    <!--
-    <logger name="baseNoStates.Group" level="DEBUG"/>
-    <logger name="baseNoStates.Schedule" level="DEBUG"/>
-    <logger name="baseNoStates.DirectoryUsers" level="DEBUG"/>
-    <logger name="baseNoStates.Door" level="DEBUG"/>
-    <root level="INFO">
-        <appender-ref ref="CONSOLE"/>
-        <appender-ref ref="DEBUG_FILE"/>
-        <appender-ref ref="ACTIVITY_FILE"/>
-    </root>
-    -->
 
     <!-- todos los logs -->
     <root level="DEBUG">

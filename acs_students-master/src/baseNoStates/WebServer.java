@@ -15,15 +15,30 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.StringTokenizer;
 
-// Based on
-// https://www.ssaurel.com/blog/create-a-simple-http-web-server-in-java
-// http://www.jcgonzalez.com/java-socket-mini-server-http-example
+/**
+ * Clase singleton que implementa un servidor web HTTP simple.
+ * Escucha conexiones en el puerto 8080 y procesa peticiones de lectores,
+ * áreas y actualizaciones. Cada conexión de cliente se gestiona en un hilo dedicado.
+ *
+ * <p>Basado en:
+ * <a href="https://www.ssaurel.com/blog/create-a-simple-http-web-server-in-java">
+ * https://www.ssaurel.com/blog/create-a-simple-http-web-server-in-java</a>
+ * <a href="http://www.jcgonzalez.com/java-socket-mini-server-http-example">
+ * http://www.jcgonzalez.com/java-socket-mini-server-http-example</a>
+ *
+ * @author Sistema ACS
+ */
 public class WebServer {
   private static final int PORT = 8080; // port to listen connection
   private static final DateTimeFormatter formatter =
-          DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
+      DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm");
 
-    private static WebServer instance;
+  private static WebServer instance;
+
+  /**
+   * Constructor privado para implementar el patrón Singleton.
+   * Inicia el servidor y comienza a escuchar conexiones.
+   */
   private WebServer() {
     try {
       ServerSocket serverConnect = new ServerSocket(PORT);
@@ -38,23 +53,40 @@ public class WebServer {
       System.err.println("Server Connection error : " + e.getMessage());
     }
   }
-    // 3. Método público estático para obtener la instancia
-    public static synchronized WebServer getInstance() {
-        if (instance == null) {
-            instance = new WebServer();
-        }
-        return instance;
-    }
 
+  /**
+   * Obtiene la instancia única del servidor (patrón Singleton).
+   *
+   * @return La instancia única de WebServer
+   */
+  public static synchronized WebServer getInstance() {
+    if (instance == null) {
+      instance = new WebServer();
+    }
+    return instance;
+  }
+
+  /**
+   * Clase interna que gestiona cada conexión de cliente en un hilo separado.
+   * Procesa las peticiones HTTP GET y genera respuestas JSON.
+   */
   private class SocketThread extends Thread {
     // as an inner class, SocketThread sees WebServer attributes
     private final Socket insocked; // client connection via Socket class
 
+    /**
+     * Constructor de SocketThread.
+     *
+     * @param insocket El socket de la conexión del cliente
+     */
     SocketThread(Socket insocket) {
       this.insocked = insocket;
       this.start();
     }
 
+    /**
+     * Método que ejecuta el hilo para gestionar la conexión del cliente.
+     */
     @Override
     public void run() {
       // we manage our particular client connection
@@ -117,6 +149,12 @@ public class WebServer {
       }
     }
 
+    /**
+     * Crea una petición según los tokens parseados de la URL.
+     *
+     * @param tokens Los tokens parseados de la URL
+     * @return La petición creada, o null si hay error
+     */
     private Request makeRequest(String[] tokens) {
       // always return request because it contains the answer for the Javascript client
       System.out.print("tokens : ");
@@ -154,6 +192,12 @@ public class WebServer {
       return request;
     }
 
+    /**
+     * Crea una petición de lector a partir de los tokens.
+     *
+     * @param tokens Los tokens parseados de la URL
+     * @return La petición de lector creada
+     */
     private RequestReader makeRequestReader(String[] tokens) {
       String credential = tokens[2];
       String action = tokens[4];
@@ -162,6 +206,12 @@ public class WebServer {
       return new RequestReader(credential, action, dateTime, doorId);
     }
 
+    /**
+     * Crea una petición de área a partir de los tokens.
+     *
+     * @param tokens Los tokens parseados de la URL
+     * @return La petición de área creada
+     */
     private RequestArea makeRequestArea(String[] tokens) {
       String credential = tokens[2];
       String action = tokens[4];
@@ -170,6 +220,11 @@ public class WebServer {
       return new RequestArea(credential, action, dateTime, areaId);
     }
 
+    /**
+     * Crea la cabecera HTTP de la respuesta.
+     *
+     * @return La cabecera HTTP como cadena de texto
+     */
     private String makeHeaderAnswer() {
       String answer = "";
       answer += "HTTP/1.0 200 OK\r\n";
@@ -182,12 +237,16 @@ public class WebServer {
       return answer;
     }
 
+    /**
+     * Crea la respuesta JSON completa (cabecera + contenido).
+     *
+     * @param request La petición procesada
+     * @return La respuesta HTTP completa como cadena de texto
+     */
     private String makeJsonAnswer(Request request) {
       String answer = makeHeaderAnswer();
       answer += request.answerToJson().toString();
       return answer;
     }
-
   }
-
 }

@@ -1,0 +1,543 @@
+2025-11-23 20:38:37,951 DEBUG [baseNoStates.clock.Clock] Starting clock
+2025-11-23 20:38:37,954 DEBUG [baseNoStates.spaces.Area] Initialized area with id building description ...
+2025-11-23 20:38:37,955 DEBUG [baseNoStates.spaces.Partition] Partition initialized
+2025-11-23 20:38:37,956 DEBUG [baseNoStates.spaces.Area] Initialized area with id basement description ...
+2025-11-23 20:38:37,956 DEBUG [baseNoStates.spaces.Partition] Partition initialized
+2025-11-23 20:38:37,956 DEBUG [baseNoStates.spaces.Area] Initialized area with id exterior description ...
+2025-11-23 20:38:37,956 DEBUG [baseNoStates.spaces.Partition] Partition initialized
+2025-11-23 20:38:37,956 DEBUG [baseNoStates.spaces.Area] Initialized area with id ground_floor description ...
+2025-11-23 20:38:37,956 DEBUG [baseNoStates.spaces.Partition] Partition initialized
+2025-11-23 20:38:37,956 DEBUG [baseNoStates.spaces.Area] Initialized area with id floor1 description ...
+2025-11-23 20:38:37,956 DEBUG [baseNoStates.spaces.Partition] Partition initialized
+2025-11-23 20:38:37,956 DEBUG [baseNoStates.spaces.Area] Initialized area with id stairs description ...
+2025-11-23 20:38:37,956 DEBUG [baseNoStates.spaces.Partition] Partition initialized
+2025-11-23 20:38:37,956 DEBUG [baseNoStates.spaces.Area] Initialized area with id parking description ...
+2025-11-23 20:38:37,956 DEBUG [baseNoStates.spaces.Space] Called Area class to initialize Space object with id parking description ... partition basement
+2025-11-23 20:38:37,956 DEBUG [baseNoStates.spaces.Area] Initialized area with id hall description ...
+2025-11-23 20:38:37,956 DEBUG [baseNoStates.spaces.Space] Called Area class to initialize Space object with id hall description ... partition ground_floor
+2025-11-23 20:38:37,956 DEBUG [baseNoStates.spaces.Area] Initialized area with id room1 description ...
+2025-11-23 20:38:37,956 DEBUG [baseNoStates.spaces.Space] Called Area class to initialize Space object with id room1 description ... partition ground_floor
+2025-11-23 20:38:37,956 DEBUG [baseNoStates.spaces.Area] Initialized area with id room2 description ...
+2025-11-23 20:38:37,956 DEBUG [baseNoStates.spaces.Space] Called Area class to initialize Space object with id room2 description ... partition ground_floor
+2025-11-23 20:38:37,956 DEBUG [baseNoStates.spaces.Area] Initialized area with id room3 description ...
+2025-11-23 20:38:37,956 DEBUG [baseNoStates.spaces.Space] Called Area class to initialize Space object with id room3 description ... partition floor1
+2025-11-23 20:38:37,958 DEBUG [baseNoStates.spaces.Area] Initialized area with id corridor description ...
+2025-11-23 20:38:37,958 DEBUG [baseNoStates.spaces.Space] Called Area class to initialize Space object with id corridor description ... partition floor1
+2025-11-23 20:38:37,958 DEBUG [baseNoStates.spaces.Area] Initialized area with id IT description ...
+2025-11-23 20:38:37,958 DEBUG [baseNoStates.spaces.Space] Called Area class to initialize Space object with id IT description ... partition floor1
+2025-11-23 20:38:37,962 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 20:38:37,962 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 20:38:37,962 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 20:38:37,962 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 20:38:37,962 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 20:38:37,962 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 20:38:37,962 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 20:38:37,962 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 20:38:37,962 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 20:38:37,963 DEBUG [baseNoStates.DirectoryUsers] Initializing all users
+2025-11-23 20:38:37,963 DEBUG [baseNoStates.Propped] Initialized Schedule object with Startdate -999999999-01-01 enddate +999999999-12-31 validDays [MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY] starthour 00:00 endhour 23:59:59.999999999
+2025-11-23 20:38:37,963 DEBUG [baseNoStates.Propped] Initialized Schedule object with Startdate 2025-09-01 enddate 2026-03-01 validDays [MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY] starthour 08:00 endhour 20:00
+2025-11-23 20:38:37,963 DEBUG [baseNoStates.Propped] Initialized Schedule object with Startdate 2025-09-01 enddate 2026-03-01 validDays [MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY] starthour 08:00 endhour 17:00
+2025-11-23 20:38:37,964 DEBUG [baseNoStates.Group] Initialized group with name Administrator allowedActions [open, close, lock, unlock, unlock_shortly] allowedSpaces [baseNoStates.spaces.Space@58c1c010, baseNoStates.spaces.Space@b7f23d9, baseNoStates.spaces.Space@61d47554, baseNoStates.spaces.Space@69b794e2, baseNoStates.spaces.Space@3f200884, baseNoStates.spaces.Space@4d339552, baseNoStates.spaces.Space@f0f2775]
+2025-11-23 20:38:37,965 DEBUG [baseNoStates.Group] Initialized group with name Manager allowedActions [open, close, lock, unlock, unlock_shortly] allowedSpaces [baseNoStates.spaces.Space@58c1c010, baseNoStates.spaces.Space@b7f23d9, baseNoStates.spaces.Space@61d47554, baseNoStates.spaces.Space@69b794e2, baseNoStates.spaces.Space@3f200884, baseNoStates.spaces.Space@4d339552, baseNoStates.spaces.Space@f0f2775]
+2025-11-23 20:38:37,965 DEBUG [baseNoStates.Group] Initialized group with name Employee allowedActions [open, close, unlock_shortly] allowedSpaces [baseNoStates.spaces.Space@b7f23d9, baseNoStates.spaces.Space@61d47554, baseNoStates.spaces.Space@69b794e2, baseNoStates.spaces.Space@4d339552]
+2025-11-23 20:38:37,965 DEBUG [baseNoStates.Group] Initialized group with name Blank allowedActions [] allowedSpaces []
+2025-11-23 20:38:37,965 DEBUG [baseNoStates.User] Initialized User object with name Bernat credential 12345 authorizedSpaces [] group baseNoStates.Group@6591f517
+2025-11-23 20:38:37,965 DEBUG [baseNoStates.User] Initialized User object with name Blai credential 77532 authorizedSpaces [] group baseNoStates.Group@6591f517
+2025-11-23 20:38:37,965 DEBUG [baseNoStates.User] Initialized User object with name Ernest credential 74984 authorizedSpaces [baseNoStates.spaces.Space@b7f23d9, baseNoStates.spaces.Space@61d47554, baseNoStates.spaces.Space@69b794e2, baseNoStates.spaces.Space@4d339552] group baseNoStates.Group@345965f2
+2025-11-23 20:38:37,965 DEBUG [baseNoStates.User] Initialized User object with name Eulalia credential 43295 authorizedSpaces [baseNoStates.spaces.Space@b7f23d9, baseNoStates.spaces.Space@61d47554, baseNoStates.spaces.Space@69b794e2, baseNoStates.spaces.Space@4d339552] group baseNoStates.Group@345965f2
+2025-11-23 20:38:37,965 DEBUG [baseNoStates.User] Initialized User object with name Manel credential 95783 authorizedSpaces [baseNoStates.spaces.Space@58c1c010, baseNoStates.spaces.Space@b7f23d9, baseNoStates.spaces.Space@61d47554, baseNoStates.spaces.Space@69b794e2, baseNoStates.spaces.Space@3f200884, baseNoStates.spaces.Space@4d339552, baseNoStates.spaces.Space@f0f2775] group baseNoStates.Group@429bd883
+2025-11-23 20:38:37,965 DEBUG [baseNoStates.User] Initialized User object with name Marta credential 05827 authorizedSpaces [baseNoStates.spaces.Space@58c1c010, baseNoStates.spaces.Space@b7f23d9, baseNoStates.spaces.Space@61d47554, baseNoStates.spaces.Space@69b794e2, baseNoStates.spaces.Space@3f200884, baseNoStates.spaces.Space@4d339552, baseNoStates.spaces.Space@f0f2775] group baseNoStates.Group@4d49af10
+2025-11-23 20:38:37,965 DEBUG [baseNoStates.User] Initialized User object with name Ana credential 11343 authorizedSpaces [baseNoStates.spaces.Space@58c1c010, baseNoStates.spaces.Space@b7f23d9, baseNoStates.spaces.Space@61d47554, baseNoStates.spaces.Space@69b794e2, baseNoStates.spaces.Space@3f200884, baseNoStates.spaces.Space@4d339552, baseNoStates.spaces.Space@f0f2775] group baseNoStates.Group@4d49af10
+2025-11-23 20:38:37,965 DEBUG [baseNoStates.Main] Starting webserver
+2025-11-23 20:38:58,408 DEBUG [baseNoStates.requests.RequestArea] Initialized RequestArea object with credential 11343 action unlock now 2025-11-23T09:30 areaId building
+2025-11-23 20:38:58,413 DEBUG [baseNoStates.requests.RequestArea] Searchig for area building
+2025-11-23 20:38:58,415 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D1 now 2025-11-23T09:30
+2025-11-23 20:38:58,415 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 20:38:58,415 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 20:38:58,415 DEBUG [baseNoStates.requests.RequestReader] Proceesing request for user 11343 and door D1
+2025-11-23 20:38:58,415 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at parking 2025-11-23T09:30
+2025-11-23 20:38:58,415 DEBUG [baseNoStates.Propped] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 20:38:58,417 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D1 at 2025-11-23T09:30
+2025-11-23 20:38:58,418 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 20:38:58,419 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 20:38:58,419 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 20:38:58,419 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 20:38:58,419 DEBUG [baseNoStates.Locked] Door D1 unlocked
+2025-11-23 20:38:58,419 INFO  [baseNoStates.Door] Action done
+2025-11-23 20:38:58,419 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D2 now 2025-11-23T09:30
+2025-11-23 20:38:58,419 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 20:38:58,419 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 20:38:58,419 DEBUG [baseNoStates.requests.RequestReader] Proceesing request for user 11343 and door D2
+2025-11-23 20:38:58,419 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at parking 2025-11-23T09:30
+2025-11-23 20:38:58,419 DEBUG [baseNoStates.Propped] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 20:38:58,419 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D2 at 2025-11-23T09:30
+2025-11-23 20:38:58,419 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 20:38:58,419 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 20:38:58,419 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 20:38:58,420 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 20:38:58,420 DEBUG [baseNoStates.Locked] Door D2 unlocked
+2025-11-23 20:38:58,420 INFO  [baseNoStates.Door] Action done
+2025-11-23 20:38:58,420 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D3 now 2025-11-23T09:30
+2025-11-23 20:38:58,420 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 20:38:58,420 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 20:38:58,420 DEBUG [baseNoStates.requests.RequestReader] Proceesing request for user 11343 and door D3
+2025-11-23 20:38:58,420 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at hall 2025-11-23T09:30
+2025-11-23 20:38:58,420 DEBUG [baseNoStates.Propped] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 20:38:58,420 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D3 at 2025-11-23T09:30
+2025-11-23 20:38:58,420 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 20:38:58,420 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 20:38:58,420 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 20:38:58,420 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 20:38:58,420 DEBUG [baseNoStates.Locked] Door D3 unlocked
+2025-11-23 20:38:58,420 INFO  [baseNoStates.Door] Action done
+2025-11-23 20:38:58,420 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D4 now 2025-11-23T09:30
+2025-11-23 20:38:58,420 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 20:38:58,420 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 20:38:58,420 DEBUG [baseNoStates.requests.RequestReader] Proceesing request for user 11343 and door D4
+2025-11-23 20:38:58,420 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at hall 2025-11-23T09:30
+2025-11-23 20:38:58,420 DEBUG [baseNoStates.Propped] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 20:38:58,420 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D4 at 2025-11-23T09:30
+2025-11-23 20:38:58,422 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 20:38:58,423 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 20:38:58,423 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 20:38:58,423 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 20:38:58,423 DEBUG [baseNoStates.Locked] Door D4 unlocked
+2025-11-23 20:38:58,423 INFO  [baseNoStates.Door] Action done
+2025-11-23 20:38:58,423 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D5 now 2025-11-23T09:30
+2025-11-23 20:38:58,423 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 20:38:58,423 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 20:38:58,423 DEBUG [baseNoStates.requests.RequestReader] Proceesing request for user 11343 and door D5
+2025-11-23 20:38:58,423 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at room1 2025-11-23T09:30
+2025-11-23 20:38:58,423 DEBUG [baseNoStates.Propped] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 20:38:58,423 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D5 at 2025-11-23T09:30
+2025-11-23 20:38:58,423 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 20:38:58,423 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 20:38:58,423 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 20:38:58,423 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 20:38:58,423 DEBUG [baseNoStates.Locked] Door D5 unlocked
+2025-11-23 20:38:58,423 INFO  [baseNoStates.Door] Action done
+2025-11-23 20:38:58,423 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D6 now 2025-11-23T09:30
+2025-11-23 20:38:58,423 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 20:38:58,423 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 20:38:58,423 DEBUG [baseNoStates.requests.RequestReader] Proceesing request for user 11343 and door D6
+2025-11-23 20:38:58,423 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at room2 2025-11-23T09:30
+2025-11-23 20:38:58,423 DEBUG [baseNoStates.Propped] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 20:38:58,423 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D6 at 2025-11-23T09:30
+2025-11-23 20:38:58,423 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 20:38:58,424 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 20:38:58,424 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 20:38:58,424 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 20:38:58,424 DEBUG [baseNoStates.Locked] Door D6 unlocked
+2025-11-23 20:38:58,424 INFO  [baseNoStates.Door] Action done
+2025-11-23 20:38:58,424 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D8 now 2025-11-23T09:30
+2025-11-23 20:38:58,424 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 20:38:58,424 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 20:38:58,424 DEBUG [baseNoStates.requests.RequestReader] Proceesing request for user 11343 and door D8
+2025-11-23 20:38:58,424 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at room3 2025-11-23T09:30
+2025-11-23 20:38:58,424 DEBUG [baseNoStates.Propped] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 20:38:58,424 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D8 at 2025-11-23T09:30
+2025-11-23 20:38:58,424 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 20:38:58,424 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 20:38:58,424 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 20:38:58,424 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 20:38:58,424 DEBUG [baseNoStates.Locked] Door D8 unlocked
+2025-11-23 20:38:58,424 INFO  [baseNoStates.Door] Action done
+2025-11-23 20:38:58,424 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D7 now 2025-11-23T09:30
+2025-11-23 20:38:58,424 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 20:38:58,424 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 20:38:58,424 DEBUG [baseNoStates.requests.RequestReader] Proceesing request for user 11343 and door D7
+2025-11-23 20:38:58,424 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at corridor 2025-11-23T09:30
+2025-11-23 20:38:58,424 DEBUG [baseNoStates.Propped] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 20:38:58,424 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D7 at 2025-11-23T09:30
+2025-11-23 20:38:58,424 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 20:38:58,424 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 20:38:58,424 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 20:38:58,424 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 20:38:58,424 DEBUG [baseNoStates.Locked] Door D7 unlocked
+2025-11-23 20:38:58,424 INFO  [baseNoStates.Door] Action done
+2025-11-23 20:38:58,424 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D9 now 2025-11-23T09:30
+2025-11-23 20:38:58,425 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 20:38:58,425 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 20:38:58,425 DEBUG [baseNoStates.requests.RequestReader] Proceesing request for user 11343 and door D9
+2025-11-23 20:38:58,425 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at IT 2025-11-23T09:30
+2025-11-23 20:38:58,425 DEBUG [baseNoStates.Propped] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 20:38:58,425 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D9 at 2025-11-23T09:30
+2025-11-23 20:38:58,425 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 20:38:58,425 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 20:38:58,425 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 20:38:58,425 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 20:38:58,425 DEBUG [baseNoStates.Locked] Door D9 unlocked
+2025-11-23 20:38:58,425 INFO  [baseNoStates.Door] Action done
+2025-11-23 20:38:58,425 DEBUG [baseNoStates.requests.RequestArea] Area building processed succesfully
+2025-11-23 20:38:58,427 DEBUG [baseNoStates.requests.RequestReader] JSONObject created
+2025-11-23 20:38:58,427 DEBUG [baseNoStates.requests.RequestReader] JSONObject created
+2025-11-23 20:38:58,427 DEBUG [baseNoStates.requests.RequestReader] JSONObject created
+2025-11-23 20:38:58,427 DEBUG [baseNoStates.requests.RequestReader] JSONObject created
+2025-11-23 20:38:58,427 DEBUG [baseNoStates.requests.RequestReader] JSONObject created
+2025-11-23 20:38:58,427 DEBUG [baseNoStates.requests.RequestReader] JSONObject created
+2025-11-23 20:38:58,427 DEBUG [baseNoStates.requests.RequestReader] JSONObject created
+2025-11-23 20:38:58,427 DEBUG [baseNoStates.requests.RequestReader] JSONObject created
+2025-11-23 20:38:58,427 DEBUG [baseNoStates.requests.RequestReader] JSONObject created
+2025-11-23 22:28:30,521 DEBUG [baseNoStates.clock.Clock] Starting clock
+2025-11-23 22:28:30,521 DEBUG [baseNoStates.spaces.Area] Initialized area with id building description ...
+2025-11-23 22:28:30,527 DEBUG [baseNoStates.spaces.Partition] Partition initialized
+2025-11-23 22:28:30,527 DEBUG [baseNoStates.spaces.Area] Initialized area with id basement description ...
+2025-11-23 22:28:30,527 DEBUG [baseNoStates.spaces.Partition] Partition initialized
+2025-11-23 22:28:30,527 DEBUG [baseNoStates.spaces.Area] Initialized area with id exterior description ...
+2025-11-23 22:28:30,527 DEBUG [baseNoStates.spaces.Partition] Partition initialized
+2025-11-23 22:28:30,527 DEBUG [baseNoStates.spaces.Area] Initialized area with id ground_floor description ...
+2025-11-23 22:28:30,527 DEBUG [baseNoStates.spaces.Partition] Partition initialized
+2025-11-23 22:28:30,527 DEBUG [baseNoStates.spaces.Area] Initialized area with id floor1 description ...
+2025-11-23 22:28:30,527 DEBUG [baseNoStates.spaces.Partition] Partition initialized
+2025-11-23 22:28:30,527 DEBUG [baseNoStates.spaces.Area] Initialized area with id stairs description ...
+2025-11-23 22:28:30,527 DEBUG [baseNoStates.spaces.Partition] Partition initialized
+2025-11-23 22:28:30,527 DEBUG [baseNoStates.spaces.Area] Initialized area with id parking description ...
+2025-11-23 22:28:30,527 DEBUG [baseNoStates.spaces.Space] Called Area class to initialize Space object with id parking description ... partition basement
+2025-11-23 22:28:30,527 DEBUG [baseNoStates.spaces.Area] Initialized area with id hall description ...
+2025-11-23 22:28:30,527 DEBUG [baseNoStates.spaces.Space] Called Area class to initialize Space object with id hall description ... partition ground_floor
+2025-11-23 22:28:30,527 DEBUG [baseNoStates.spaces.Area] Initialized area with id room1 description ...
+2025-11-23 22:28:30,527 DEBUG [baseNoStates.spaces.Space] Called Area class to initialize Space object with id room1 description ... partition ground_floor
+2025-11-23 22:28:30,527 DEBUG [baseNoStates.spaces.Area] Initialized area with id room2 description ...
+2025-11-23 22:28:30,527 DEBUG [baseNoStates.spaces.Space] Called Area class to initialize Space object with id room2 description ... partition ground_floor
+2025-11-23 22:28:30,527 DEBUG [baseNoStates.spaces.Area] Initialized area with id room3 description ...
+2025-11-23 22:28:30,527 DEBUG [baseNoStates.spaces.Space] Called Area class to initialize Space object with id room3 description ... partition floor1
+2025-11-23 22:28:30,527 DEBUG [baseNoStates.spaces.Area] Initialized area with id corridor description ...
+2025-11-23 22:28:30,527 DEBUG [baseNoStates.spaces.Space] Called Area class to initialize Space object with id corridor description ... partition floor1
+2025-11-23 22:28:30,527 DEBUG [baseNoStates.spaces.Area] Initialized area with id IT description ...
+2025-11-23 22:28:30,528 DEBUG [baseNoStates.spaces.Space] Called Area class to initialize Space object with id IT description ... partition floor1
+2025-11-23 22:28:30,529 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 22:28:30,529 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 22:28:30,529 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 22:28:30,529 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 22:28:30,529 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 22:28:30,529 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 22:28:30,529 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 22:28:30,529 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 22:28:30,529 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 22:28:30,532 DEBUG [baseNoStates.DirectoryUsers] Initializing all users
+2025-11-23 22:28:30,532 DEBUG [baseNoStates.Propped] Initialized Schedule object with Startdate -999999999-01-01 enddate +999999999-12-31 validDays [MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY] starthour 00:00 endhour 23:59:59.999999999
+2025-11-23 22:28:30,532 DEBUG [baseNoStates.Propped] Initialized Schedule object with Startdate 2025-09-01 enddate 2026-03-01 validDays [MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY] starthour 08:00 endhour 20:00
+2025-11-23 22:28:30,532 DEBUG [baseNoStates.Propped] Initialized Schedule object with Startdate 2025-09-01 enddate 2026-03-01 validDays [MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY] starthour 08:00 endhour 17:00
+2025-11-23 22:28:30,532 DEBUG [baseNoStates.Group] Initialized group with name Administrator allowedActions [open, close, lock, unlock, unlock_shortly] allowedSpaces [baseNoStates.spaces.Space@279ad2e3, baseNoStates.spaces.Space@58134517, baseNoStates.spaces.Space@4450d156, baseNoStates.spaces.Space@4461c7e3, baseNoStates.spaces.Space@351d0846, baseNoStates.spaces.Space@77e4c80f, baseNoStates.spaces.Space@35fc6dc4]
+2025-11-23 22:28:30,532 DEBUG [baseNoStates.Group] Initialized group with name Manager allowedActions [open, close, lock, unlock, unlock_shortly] allowedSpaces [baseNoStates.spaces.Space@279ad2e3, baseNoStates.spaces.Space@58134517, baseNoStates.spaces.Space@4450d156, baseNoStates.spaces.Space@4461c7e3, baseNoStates.spaces.Space@351d0846, baseNoStates.spaces.Space@77e4c80f, baseNoStates.spaces.Space@35fc6dc4]
+2025-11-23 22:28:30,532 DEBUG [baseNoStates.Group] Initialized group with name Employee allowedActions [open, close, unlock_shortly] allowedSpaces [baseNoStates.spaces.Space@58134517, baseNoStates.spaces.Space@4450d156, baseNoStates.spaces.Space@4461c7e3, baseNoStates.spaces.Space@77e4c80f]
+2025-11-23 22:28:30,532 DEBUG [baseNoStates.Group] Initialized group with name Blank allowedActions [] allowedSpaces []
+2025-11-23 22:28:30,534 DEBUG [baseNoStates.User] Initialized User object with name Bernat credential 12345 authorizedSpaces [] group baseNoStates.Group@226a82c4
+2025-11-23 22:28:30,534 DEBUG [baseNoStates.User] Initialized User object with name Blai credential 77532 authorizedSpaces [] group baseNoStates.Group@226a82c4
+2025-11-23 22:28:30,534 DEBUG [baseNoStates.User] Initialized User object with name Ernest credential 74984 authorizedSpaces [baseNoStates.spaces.Space@58134517, baseNoStates.spaces.Space@4450d156, baseNoStates.spaces.Space@4461c7e3, baseNoStates.spaces.Space@77e4c80f] group baseNoStates.Group@731f8236
+2025-11-23 22:28:30,534 DEBUG [baseNoStates.User] Initialized User object with name Eulalia credential 43295 authorizedSpaces [baseNoStates.spaces.Space@58134517, baseNoStates.spaces.Space@4450d156, baseNoStates.spaces.Space@4461c7e3, baseNoStates.spaces.Space@77e4c80f] group baseNoStates.Group@731f8236
+2025-11-23 22:28:30,534 DEBUG [baseNoStates.User] Initialized User object with name Manel credential 95783 authorizedSpaces [baseNoStates.spaces.Space@279ad2e3, baseNoStates.spaces.Space@58134517, baseNoStates.spaces.Space@4450d156, baseNoStates.spaces.Space@4461c7e3, baseNoStates.spaces.Space@351d0846, baseNoStates.spaces.Space@77e4c80f, baseNoStates.spaces.Space@35fc6dc4] group baseNoStates.Group@255b53dc
+2025-11-23 22:28:30,534 DEBUG [baseNoStates.User] Initialized User object with name Marta credential 05827 authorizedSpaces [baseNoStates.spaces.Space@279ad2e3, baseNoStates.spaces.Space@58134517, baseNoStates.spaces.Space@4450d156, baseNoStates.spaces.Space@4461c7e3, baseNoStates.spaces.Space@351d0846, baseNoStates.spaces.Space@77e4c80f, baseNoStates.spaces.Space@35fc6dc4] group baseNoStates.Group@1dd92fe2
+2025-11-23 22:28:30,534 DEBUG [baseNoStates.User] Initialized User object with name Ana credential 11343 authorizedSpaces [baseNoStates.spaces.Space@279ad2e3, baseNoStates.spaces.Space@58134517, baseNoStates.spaces.Space@4450d156, baseNoStates.spaces.Space@4461c7e3, baseNoStates.spaces.Space@351d0846, baseNoStates.spaces.Space@77e4c80f, baseNoStates.spaces.Space@35fc6dc4] group baseNoStates.Group@1dd92fe2
+2025-11-23 22:28:30,534 DEBUG [baseNoStates.Main] Starting webserver
+2025-11-23 22:28:44,915 DEBUG [baseNoStates.requests.RequestArea] Initialized RequestArea object with credential 11343 action unlock now 2025-11-23T09:30 areaId building
+2025-11-23 22:28:44,916 DEBUG [baseNoStates.requests.RequestArea] Searching for area building
+2025-11-23 22:28:44,922 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D1 now 2025-11-23T09:30
+2025-11-23 22:28:44,922 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 22:28:44,922 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 22:28:44,922 DEBUG [baseNoStates.requests.RequestReader] Processing request for user 11343 and door D1
+2025-11-23 22:28:44,923 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at parking 2025-11-23T09:30
+2025-11-23 22:28:44,923 DEBUG [baseNoStates.Propped] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 22:28:44,926 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D1 at 2025-11-23T09:30
+2025-11-23 22:28:44,927 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 22:28:44,927 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 22:28:44,927 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 22:28:44,927 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 22:28:44,927 DEBUG [baseNoStates.Locked] Door D1 unlocked
+2025-11-23 22:28:44,927 INFO  [baseNoStates.Door] Action done
+2025-11-23 22:28:44,927 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D2 now 2025-11-23T09:30
+2025-11-23 22:28:44,927 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 22:28:44,927 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 22:28:44,927 DEBUG [baseNoStates.requests.RequestReader] Processing request for user 11343 and door D2
+2025-11-23 22:28:44,927 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at parking 2025-11-23T09:30
+2025-11-23 22:28:44,927 DEBUG [baseNoStates.Propped] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 22:28:44,927 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D2 at 2025-11-23T09:30
+2025-11-23 22:28:44,927 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 22:28:44,927 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 22:28:44,927 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 22:28:44,927 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 22:28:44,927 DEBUG [baseNoStates.Locked] Door D2 unlocked
+2025-11-23 22:28:44,927 INFO  [baseNoStates.Door] Action done
+2025-11-23 22:28:44,928 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D3 now 2025-11-23T09:30
+2025-11-23 22:28:44,928 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 22:28:44,928 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 22:28:44,928 DEBUG [baseNoStates.requests.RequestReader] Processing request for user 11343 and door D3
+2025-11-23 22:28:44,928 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at hall 2025-11-23T09:30
+2025-11-23 22:28:44,928 DEBUG [baseNoStates.Propped] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 22:28:44,928 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D3 at 2025-11-23T09:30
+2025-11-23 22:28:44,928 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 22:28:44,928 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 22:28:44,928 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 22:28:44,928 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 22:28:44,928 DEBUG [baseNoStates.Locked] Door D3 unlocked
+2025-11-23 22:28:44,928 INFO  [baseNoStates.Door] Action done
+2025-11-23 22:28:44,928 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D4 now 2025-11-23T09:30
+2025-11-23 22:28:44,928 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 22:28:44,928 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 22:28:44,928 DEBUG [baseNoStates.requests.RequestReader] Processing request for user 11343 and door D4
+2025-11-23 22:28:44,928 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at hall 2025-11-23T09:30
+2025-11-23 22:28:44,928 DEBUG [baseNoStates.Propped] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 22:28:44,928 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D4 at 2025-11-23T09:30
+2025-11-23 22:28:44,928 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 22:28:44,928 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 22:28:44,928 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 22:28:44,928 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 22:28:44,928 DEBUG [baseNoStates.Locked] Door D4 unlocked
+2025-11-23 22:28:44,929 INFO  [baseNoStates.Door] Action done
+2025-11-23 22:28:44,929 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D5 now 2025-11-23T09:30
+2025-11-23 22:28:44,929 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 22:28:44,929 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 22:28:44,929 DEBUG [baseNoStates.requests.RequestReader] Processing request for user 11343 and door D5
+2025-11-23 22:28:44,929 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at room1 2025-11-23T09:30
+2025-11-23 22:28:44,929 DEBUG [baseNoStates.Propped] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 22:28:44,929 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D5 at 2025-11-23T09:30
+2025-11-23 22:28:44,929 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 22:28:44,929 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 22:28:44,929 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 22:28:44,929 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 22:28:44,929 DEBUG [baseNoStates.Locked] Door D5 unlocked
+2025-11-23 22:28:44,929 INFO  [baseNoStates.Door] Action done
+2025-11-23 22:28:44,929 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D6 now 2025-11-23T09:30
+2025-11-23 22:28:44,929 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 22:28:44,929 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 22:28:44,929 DEBUG [baseNoStates.requests.RequestReader] Processing request for user 11343 and door D6
+2025-11-23 22:28:44,929 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at room2 2025-11-23T09:30
+2025-11-23 22:28:44,929 DEBUG [baseNoStates.Propped] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 22:28:44,929 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D6 at 2025-11-23T09:30
+2025-11-23 22:28:44,929 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 22:28:44,930 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 22:28:44,930 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 22:28:44,930 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 22:28:44,930 DEBUG [baseNoStates.Locked] Door D6 unlocked
+2025-11-23 22:28:44,930 INFO  [baseNoStates.Door] Action done
+2025-11-23 22:28:44,930 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D8 now 2025-11-23T09:30
+2025-11-23 22:28:44,930 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 22:28:44,930 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 22:28:44,930 DEBUG [baseNoStates.requests.RequestReader] Processing request for user 11343 and door D8
+2025-11-23 22:28:44,930 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at room3 2025-11-23T09:30
+2025-11-23 22:28:44,930 DEBUG [baseNoStates.Propped] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 22:28:44,930 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D8 at 2025-11-23T09:30
+2025-11-23 22:28:44,930 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 22:28:44,930 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 22:28:44,930 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 22:28:44,930 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 22:28:44,930 DEBUG [baseNoStates.Locked] Door D8 unlocked
+2025-11-23 22:28:44,930 INFO  [baseNoStates.Door] Action done
+2025-11-23 22:28:44,930 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D7 now 2025-11-23T09:30
+2025-11-23 22:28:44,930 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 22:28:44,930 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 22:28:44,930 DEBUG [baseNoStates.requests.RequestReader] Processing request for user 11343 and door D7
+2025-11-23 22:28:44,930 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at corridor 2025-11-23T09:30
+2025-11-23 22:28:44,930 DEBUG [baseNoStates.Propped] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 22:28:44,930 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D7 at 2025-11-23T09:30
+2025-11-23 22:28:44,930 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 22:28:44,930 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 22:28:44,930 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 22:28:44,931 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 22:28:44,931 DEBUG [baseNoStates.Locked] Door D7 unlocked
+2025-11-23 22:28:44,931 INFO  [baseNoStates.Door] Action done
+2025-11-23 22:28:44,931 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D9 now 2025-11-23T09:30
+2025-11-23 22:28:44,931 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 22:28:44,931 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 22:28:44,931 DEBUG [baseNoStates.requests.RequestReader] Processing request for user 11343 and door D9
+2025-11-23 22:28:44,931 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at IT 2025-11-23T09:30
+2025-11-23 22:28:44,931 DEBUG [baseNoStates.Propped] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 22:28:44,931 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D9 at 2025-11-23T09:30
+2025-11-23 22:28:44,931 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 22:28:44,931 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 22:28:44,931 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 22:28:44,931 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 22:28:44,931 DEBUG [baseNoStates.Locked] Door D9 unlocked
+2025-11-23 22:28:44,931 INFO  [baseNoStates.Door] Action done
+2025-11-23 22:28:44,931 DEBUG [baseNoStates.requests.RequestArea] Area building processed successfully
+2025-11-23 22:28:44,933 DEBUG [baseNoStates.requests.RequestReader] JSONObject created
+2025-11-23 22:28:44,933 DEBUG [baseNoStates.requests.RequestReader] JSONObject created
+2025-11-23 22:28:44,933 DEBUG [baseNoStates.requests.RequestReader] JSONObject created
+2025-11-23 22:28:44,933 DEBUG [baseNoStates.requests.RequestReader] JSONObject created
+2025-11-23 22:28:44,933 DEBUG [baseNoStates.requests.RequestReader] JSONObject created
+2025-11-23 22:28:44,933 DEBUG [baseNoStates.requests.RequestReader] JSONObject created
+2025-11-23 22:28:44,933 DEBUG [baseNoStates.requests.RequestReader] JSONObject created
+2025-11-23 22:28:44,933 DEBUG [baseNoStates.requests.RequestReader] JSONObject created
+2025-11-23 22:28:44,933 DEBUG [baseNoStates.requests.RequestReader] JSONObject created
+2025-11-23 22:34:41,358 DEBUG [baseNoStates.clock.Clock] Starting clock
+2025-11-23 22:34:41,367 DEBUG [baseNoStates.spaces.Area] Initialized area with id building description ...
+2025-11-23 22:34:41,367 DEBUG [baseNoStates.spaces.Partition] Partition initialized
+2025-11-23 22:34:41,367 DEBUG [baseNoStates.spaces.Area] Initialized area with id basement description ...
+2025-11-23 22:34:41,367 DEBUG [baseNoStates.spaces.Partition] Partition initialized
+2025-11-23 22:34:41,367 DEBUG [baseNoStates.spaces.Area] Initialized area with id exterior description ...
+2025-11-23 22:34:41,367 DEBUG [baseNoStates.spaces.Partition] Partition initialized
+2025-11-23 22:34:41,367 DEBUG [baseNoStates.spaces.Area] Initialized area with id ground_floor description ...
+2025-11-23 22:34:41,367 DEBUG [baseNoStates.spaces.Partition] Partition initialized
+2025-11-23 22:34:41,367 DEBUG [baseNoStates.spaces.Area] Initialized area with id floor1 description ...
+2025-11-23 22:34:41,367 DEBUG [baseNoStates.spaces.Partition] Partition initialized
+2025-11-23 22:34:41,367 DEBUG [baseNoStates.spaces.Area] Initialized area with id stairs description ...
+2025-11-23 22:34:41,367 DEBUG [baseNoStates.spaces.Partition] Partition initialized
+2025-11-23 22:34:41,367 DEBUG [baseNoStates.spaces.Area] Initialized area with id parking description ...
+2025-11-23 22:34:41,367 DEBUG [baseNoStates.spaces.Space] Called Area class to initialize Space object with id parking description ... partition basement
+2025-11-23 22:34:41,367 DEBUG [baseNoStates.spaces.Area] Initialized area with id hall description ...
+2025-11-23 22:34:41,367 DEBUG [baseNoStates.spaces.Space] Called Area class to initialize Space object with id hall description ... partition ground_floor
+2025-11-23 22:34:41,367 DEBUG [baseNoStates.spaces.Area] Initialized area with id room1 description ...
+2025-11-23 22:34:41,367 DEBUG [baseNoStates.spaces.Space] Called Area class to initialize Space object with id room1 description ... partition ground_floor
+2025-11-23 22:34:41,367 DEBUG [baseNoStates.spaces.Area] Initialized area with id room2 description ...
+2025-11-23 22:34:41,367 DEBUG [baseNoStates.spaces.Space] Called Area class to initialize Space object with id room2 description ... partition ground_floor
+2025-11-23 22:34:41,367 DEBUG [baseNoStates.spaces.Area] Initialized area with id room3 description ...
+2025-11-23 22:34:41,367 DEBUG [baseNoStates.spaces.Space] Called Area class to initialize Space object with id room3 description ... partition floor1
+2025-11-23 22:34:41,367 DEBUG [baseNoStates.spaces.Area] Initialized area with id corridor description ...
+2025-11-23 22:34:41,367 DEBUG [baseNoStates.spaces.Space] Called Area class to initialize Space object with id corridor description ... partition floor1
+2025-11-23 22:34:41,367 DEBUG [baseNoStates.spaces.Area] Initialized area with id IT description ...
+2025-11-23 22:34:41,367 DEBUG [baseNoStates.spaces.Space] Called Area class to initialize Space object with id IT description ... partition floor1
+2025-11-23 22:34:41,371 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 22:34:41,371 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 22:34:41,371 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 22:34:41,371 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 22:34:41,371 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 22:34:41,371 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 22:34:41,371 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 22:34:41,371 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 22:34:41,371 DEBUG [baseNoStates.Locked] calling Door class to initialize Locked object
+2025-11-23 22:34:41,371 DEBUG [baseNoStates.DirectoryUsers] Initializing all users
+2025-11-23 22:34:41,371 DEBUG [baseNoStates.Schedule] Initialized Schedule object with Startdate -999999999-01-01 enddate +999999999-12-31 validDays [MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY] starthour 00:00 endhour 23:59:59.999999999
+2025-11-23 22:34:41,371 DEBUG [baseNoStates.Schedule] Initialized Schedule object with Startdate 2025-09-01 enddate 2026-03-01 validDays [MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY] starthour 08:00 endhour 20:00
+2025-11-23 22:34:41,371 DEBUG [baseNoStates.Schedule] Initialized Schedule object with Startdate 2025-09-01 enddate 2026-03-01 validDays [MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY] starthour 08:00 endhour 17:00
+2025-11-23 22:34:41,371 DEBUG [baseNoStates.Group] Initialized group with name Administrator allowedActions [open, close, lock, unlock, unlock_shortly] allowedSpaces [baseNoStates.spaces.Space@17c1bced, baseNoStates.spaces.Space@2d9d4f9d, baseNoStates.spaces.Space@4034c28c, baseNoStates.spaces.Space@e50a6f6, baseNoStates.spaces.Space@14ec4505, baseNoStates.spaces.Space@53ca01a2, baseNoStates.spaces.Space@358c99f5]
+2025-11-23 22:34:41,371 DEBUG [baseNoStates.Group] Initialized group with name Manager allowedActions [open, close, lock, unlock, unlock_shortly] allowedSpaces [baseNoStates.spaces.Space@17c1bced, baseNoStates.spaces.Space@2d9d4f9d, baseNoStates.spaces.Space@4034c28c, baseNoStates.spaces.Space@e50a6f6, baseNoStates.spaces.Space@14ec4505, baseNoStates.spaces.Space@53ca01a2, baseNoStates.spaces.Space@358c99f5]
+2025-11-23 22:34:41,371 DEBUG [baseNoStates.Group] Initialized group with name Employee allowedActions [open, close, unlock_shortly] allowedSpaces [baseNoStates.spaces.Space@2d9d4f9d, baseNoStates.spaces.Space@4034c28c, baseNoStates.spaces.Space@e50a6f6, baseNoStates.spaces.Space@53ca01a2]
+2025-11-23 22:34:41,371 DEBUG [baseNoStates.Group] Initialized group with name Blank allowedActions [] allowedSpaces []
+2025-11-23 22:34:41,371 DEBUG [baseNoStates.User] Initialized User object with name Bernat credential 12345 authorizedSpaces [] group baseNoStates.Group@48524010
+2025-11-23 22:34:41,371 DEBUG [baseNoStates.User] Initialized User object with name Blai credential 77532 authorizedSpaces [] group baseNoStates.Group@48524010
+2025-11-23 22:34:41,371 DEBUG [baseNoStates.User] Initialized User object with name Ernest credential 74984 authorizedSpaces [baseNoStates.spaces.Space@2d9d4f9d, baseNoStates.spaces.Space@4034c28c, baseNoStates.spaces.Space@e50a6f6, baseNoStates.spaces.Space@53ca01a2] group baseNoStates.Group@4b168fa9
+2025-11-23 22:34:41,371 DEBUG [baseNoStates.User] Initialized User object with name Eulalia credential 43295 authorizedSpaces [baseNoStates.spaces.Space@2d9d4f9d, baseNoStates.spaces.Space@4034c28c, baseNoStates.spaces.Space@e50a6f6, baseNoStates.spaces.Space@53ca01a2] group baseNoStates.Group@4b168fa9
+2025-11-23 22:34:41,371 DEBUG [baseNoStates.User] Initialized User object with name Manel credential 95783 authorizedSpaces [baseNoStates.spaces.Space@17c1bced, baseNoStates.spaces.Space@2d9d4f9d, baseNoStates.spaces.Space@4034c28c, baseNoStates.spaces.Space@e50a6f6, baseNoStates.spaces.Space@14ec4505, baseNoStates.spaces.Space@53ca01a2, baseNoStates.spaces.Space@358c99f5] group baseNoStates.Group@1a84f40f
+2025-11-23 22:34:41,371 DEBUG [baseNoStates.User] Initialized User object with name Marta credential 05827 authorizedSpaces [baseNoStates.spaces.Space@17c1bced, baseNoStates.spaces.Space@2d9d4f9d, baseNoStates.spaces.Space@4034c28c, baseNoStates.spaces.Space@e50a6f6, baseNoStates.spaces.Space@14ec4505, baseNoStates.spaces.Space@53ca01a2, baseNoStates.spaces.Space@358c99f5] group baseNoStates.Group@23282c25
+2025-11-23 22:34:41,377 DEBUG [baseNoStates.User] Initialized User object with name Ana credential 11343 authorizedSpaces [baseNoStates.spaces.Space@17c1bced, baseNoStates.spaces.Space@2d9d4f9d, baseNoStates.spaces.Space@4034c28c, baseNoStates.spaces.Space@e50a6f6, baseNoStates.spaces.Space@14ec4505, baseNoStates.spaces.Space@53ca01a2, baseNoStates.spaces.Space@358c99f5] group baseNoStates.Group@23282c25
+2025-11-23 22:34:41,377 DEBUG [baseNoStates.Main] Starting webserver
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.requests.RequestArea] Initialized RequestArea object with credential 11343 action unlock now 2025-11-23T09:30 areaId building
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.requests.RequestArea] Searching for area building
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D1 now 2025-11-23T09:30
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.requests.RequestReader] Processing request for user 11343 and door D1
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at parking 2025-11-23T09:30
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.Schedule] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 22:34:52,146 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D1 at 2025-11-23T09:30
+2025-11-23 22:34:52,146 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.Locked] Door D1 unlocked
+2025-11-23 22:34:52,146 INFO  [baseNoStates.Door] Action done
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D2 now 2025-11-23T09:30
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.requests.RequestReader] Processing request for user 11343 and door D2
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at parking 2025-11-23T09:30
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.Schedule] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 22:34:52,146 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D2 at 2025-11-23T09:30
+2025-11-23 22:34:52,146 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.Locked] Door D2 unlocked
+2025-11-23 22:34:52,146 INFO  [baseNoStates.Door] Action done
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D3 now 2025-11-23T09:30
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.requests.RequestReader] Processing request for user 11343 and door D3
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at hall 2025-11-23T09:30
+2025-11-23 22:34:52,146 DEBUG [baseNoStates.Schedule] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 22:34:52,146 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D3 at 2025-11-23T09:30
+2025-11-23 22:34:52,160 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Locked] Door D3 unlocked
+2025-11-23 22:34:52,160 INFO  [baseNoStates.Door] Action done
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D4 now 2025-11-23T09:30
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.requests.RequestReader] Processing request for user 11343 and door D4
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at hall 2025-11-23T09:30
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Schedule] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 22:34:52,160 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D4 at 2025-11-23T09:30
+2025-11-23 22:34:52,160 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Locked] Door D4 unlocked
+2025-11-23 22:34:52,160 INFO  [baseNoStates.Door] Action done
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D5 now 2025-11-23T09:30
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.requests.RequestReader] Processing request for user 11343 and door D5
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at room1 2025-11-23T09:30
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Schedule] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 22:34:52,160 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D5 at 2025-11-23T09:30
+2025-11-23 22:34:52,160 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Locked] Door D5 unlocked
+2025-11-23 22:34:52,160 INFO  [baseNoStates.Door] Action done
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D6 now 2025-11-23T09:30
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.requests.RequestReader] Processing request for user 11343 and door D6
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at room2 2025-11-23T09:30
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Schedule] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 22:34:52,160 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D6 at 2025-11-23T09:30
+2025-11-23 22:34:52,160 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Locked] Door D6 unlocked
+2025-11-23 22:34:52,160 INFO  [baseNoStates.Door] Action done
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D8 now 2025-11-23T09:30
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.requests.RequestReader] Processing request for user 11343 and door D8
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at room3 2025-11-23T09:30
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Schedule] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 22:34:52,160 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D8 at 2025-11-23T09:30
+2025-11-23 22:34:52,160 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Locked] Door D8 unlocked
+2025-11-23 22:34:52,160 INFO  [baseNoStates.Door] Action done
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D7 now 2025-11-23T09:30
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.requests.RequestReader] Processing request for user 11343 and door D7
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at corridor 2025-11-23T09:30
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Schedule] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 22:34:52,160 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D7 at 2025-11-23T09:30
+2025-11-23 22:34:52,160 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Locked] Door D7 unlocked
+2025-11-23 22:34:52,160 INFO  [baseNoStates.Door] Action done
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.requests.RequestReader] Initializing RequestReader object with credentials 11343 action unlock doorId D9 now 2025-11-23T09:30
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.DirectoryUsers] searching user with credentials 11343
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.DirectoryUsers] user with credentials 11343 found
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.requests.RequestReader] Processing request for user 11343 and door D9
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Group] Evaluating if unlock is allowed at IT 2025-11-23T09:30
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Schedule] Checking if 2025-11-23T09:30 is within schedule
+2025-11-23 22:34:52,160 INFO  [baseNoStates.Door] User with id 11343 trying to unlock door D9 at 2025-11-23T09:30
+2025-11-23 22:34:52,160 INFO  [baseNoStates.Door] Request authorized
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Door] Doing action unlock
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Unlocked] Unlocked object initialized calling DoorState constructor
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.clock.Clock] Removing observer
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.Locked] Door D9 unlocked
+2025-11-23 22:34:52,160 INFO  [baseNoStates.Door] Action done
+2025-11-23 22:34:52,160 DEBUG [baseNoStates.requests.RequestArea] Area building processed successfully
+2025-11-23 22:34:52,169 DEBUG [baseNoStates.requests.RequestReader] JSONObject created
+2025-11-23 22:34:52,170 DEBUG [baseNoStates.requests.RequestReader] JSONObject created
+2025-11-23 22:34:52,170 DEBUG [baseNoStates.requests.RequestReader] JSONObject created
+2025-11-23 22:34:52,170 DEBUG [baseNoStates.requests.RequestReader] JSONObject created
+2025-11-23 22:34:52,170 DEBUG [baseNoStates.requests.RequestReader] JSONObject created
+2025-11-23 22:34:52,170 DEBUG [baseNoStates.requests.RequestReader] JSONObject created
+2025-11-23 22:34:52,170 DEBUG [baseNoStates.requests.RequestReader] JSONObject created
+2025-11-23 22:34:52,170 DEBUG [baseNoStates.requests.RequestReader] JSONObject created
+2025-11-23 22:34:52,170 DEBUG [baseNoStates.requests.RequestReader] JSONObject created

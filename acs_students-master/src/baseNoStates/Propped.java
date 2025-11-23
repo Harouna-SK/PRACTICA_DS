@@ -2,54 +2,77 @@ package baseNoStates;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.slf4j.Marker;
-import org.slf4j.MarkerFactory;
-import org.slf4j.MDC;
 
+/**
+ * Clase que representa el estado "propped" (atascada) de una puerta.
+ * Este estado ocurre cuando una puerta en UnlockedShortly permanece abierta
+ * después de 10 segundos. La puerta está abierta y no se puede bloquear
+ * hasta que se cierre manualmente.
+ *
+ * @author Sistema ACS
+ */
 public class Propped extends DoorState {
-    private static final Logger LOG = LoggerFactory.getLogger(Propped.class);
+  private static final Logger LOG = LoggerFactory.getLogger(Propped.class);
 
-    public Propped(Door door) {
-        super(door, "propped");
-        LOG.debug("Initializing Propped object by calling DoorState class");
-    }
+  /**
+   * Constructor de Propped.
+   *
+   * @param door La puerta que estará en estado propped
+   */
+  public Propped(Door door) {
+    super(door, "propped");
+    LOG.debug("Initializing Propped object by calling DoorState class");
+  }
 
-    @Override
-    public String getName() {
-        return "propped";
-    }
+  /**
+   * Obtiene el nombre del estado.
+   *
+   * @return El nombre "propped"
+   */
+  @Override
+  public String getName() {
+    return "propped";
+  }
 
-    @Override
-    public void lock() {
-        // Can't block if is open propped (atascada)
-        // System.out.println("Cannot lock: door " + door.getId() + " is propped open.");
-        LOG.warn("Cannot lock: door " + door.getId() + " is propped open.");
-    }
+  /**
+   * Intenta bloquear la puerta. No es posible porque está abierta y atascada.
+   */
+  @Override
+  public void lock() {
+    LOG.warn("Cannot lock: door {} is propped open.", door.getId());
+  }
 
-    @Override
-    public void unlock() {
-        // Is already open
-        // System.out.println("Door " + door.getId() + " already open (propped).");
-        LOG.warn("Door " + door.getId() + " already open (propped).");
-    }
+  /**
+   * Intenta desbloquear la puerta. Ya está abierta, no hace nada.
+   */
+  @Override
+  public void unlock() {
+    LOG.warn("Door {} already open (propped).", door.getId());
+  }
 
-    @Override
-    public void open() {
-        // System.out.println("Door " + door.getId() + " is already open (propped).");
-        LOG.warn("Door " + door.getId() + " is already open (propped).");
-    }
+  /**
+   * Intenta abrir la puerta. Ya está abierta, no hace nada.
+   */
+  @Override
+  public void open() {
+    LOG.warn("Door {} is already open (propped).", door.getId());
+  }
 
-    @Override
-    public void close() {
-        // If it closes it turns locked
-        door.setClosed(true);
-        door.setState(new Locked(door));
-        // System.out.println("Door " + door.getId() + " closed and now locked.");
-        LOG.debug("Door " + door.getId() + " closed and now locked.");
-    }
-    @Override
-    public void unlockShortly() {
-        // System.out.println("Cannot unlock shortly: door " + door.getId() + " is propped open.");
-        LOG.debug("Cannot unlock shortly: door " + door.getId() + " is propped open.");
-    }
+  /**
+   * Cierra la puerta y cambia su estado a Locked.
+   */
+  @Override
+  public void close() {
+    door.setClosed(true);
+    door.setState(new Locked(door));
+    LOG.debug("Door {} closed and now locked.", door.getId());
+  }
+
+  /**
+   * Intenta desbloquear temporalmente la puerta. No es posible en este estado.
+   */
+  @Override
+  public void unlockShortly() {
+    LOG.debug("Cannot unlock shortly: door {} is propped open.", door.getId());
+  }
 }

@@ -14,112 +14,128 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.slf4j.Marker;
-import org.slf4j.MarkerFactory;
 
+/**
+ * Clase que representa una petición sobre un área completa.
+ * Procesa la petición creando peticiones individuales para cada puerta
+ * que da acceso al área. Para algunas puertas la acción puede estar
+ * autorizada y se realizará, para otras no estará autorizada y no
+ * ocurrirá nada.
+ *
+ * @author Sistema ACS
+ */
 public class RequestArea implements Request {
-    private final String credential;
-    private final String action;
-    private final String areaId;
-    private final LocalDateTime now;
-    private ArrayList<RequestReader> requests = new ArrayList<>();
-    private static final Logger LOG = LoggerFactory.getLogger(RequestArea.class);
+  private final String credential;
+  private final String action;
+  private final String areaId;
+  private final LocalDateTime now;
+  private ArrayList<RequestReader> requests = new ArrayList<>();
+  private static final Logger LOG = LoggerFactory.getLogger(RequestArea.class);
 
-    public RequestArea(String credential, String action, LocalDateTime now, String areaId) {
-        this.credential = credential;
-        this.areaId = areaId;
-        assert action.equals(Actions.LOCK) || action.equals(Actions.UNLOCK)
-                : "invalid action " + action + " for an area request";
-        this.action = action;
-        this.now = now;
-        LOG.debug("Initialized RequestArea object with credential {} action {} now {} areaId {}", credential, action, now, areaId);
+  /**
+   * Constructor de RequestArea.
+   *
+   * @param credential Credencial del usuario que realiza la petición
+   * @param action     Acción a realizar (LOCK o UNLOCK)
+   * @param now        Fecha/hora de la petición
+   * @param areaId     Identificador del área sobre la que se realiza la petición
+   */
+  public RequestArea(String credential, String action, LocalDateTime now, String areaId) {
+    this.credential = credential;
+    this.areaId = areaId;
+    assert action.equals(Actions.LOCK) || action.equals(Actions.UNLOCK)
+        : "invalid action " + action + " for an area request";
+    this.action = action;
+    this.now = now;
+    LOG.debug("Initialized RequestArea object with credential {} action {} "
+        + "now {} areaId {}", credential, action, now, areaId);
+  }
+
+  /**
+   * Obtiene la acción de la petición.
+   *
+   * @return La acción (LOCK o UNLOCK)
+   */
+  public String getAction() {
+    return action;
+  }
+
+  /**
+   * Convierte la respuesta de la petición a formato JSON.
+   * Incluye la acción, el área y todas las peticiones de puertas resultantes.
+   *
+   * @return Un objeto JSON con la respuesta de la petición
+   */
+  @Override
+  public JSONObject answerToJson() {
+    JSONObject json = new JSONObject();
+    json.put("action", action);
+    json.put("areaId", areaId);
+    JSONArray jsonRequests = new JSONArray();
+    for (RequestReader rd : requests) {
+      jsonRequests.put(rd.answerToJson());
+    }
+    json.put("requestsDoors", jsonRequests);
+    return json;
+  }
+
+  /**
+   * Representa la petición como una cadena de texto.
+   *
+   * @return Representación en texto de la petición
+   */
+  @Override
+  public String toString() {
+    String requestsDoorsStr;
+    if (requests.size() == 0) {
+      requestsDoorsStr = "";
+    } else {
+      requestsDoorsStr = requests.toString();
+    }
+    return "Request{"
+        + "credential=" + credential
+        + ", action=" + action
+        + ", now=" + now
+        + ", areaId=" + areaId
+        + ", requestsDoors=" + requestsDoorsStr
+        + "}";
+  }
+
+  /**
+   * Procesa la petición del área.
+   * Busca el área correspondiente, obtiene todas las puertas que dan acceso
+   * a esa área, y crea y procesa una petición individual para cada puerta.
+   * El resultado de cada petición de puerta se añade a la lista de sub-peticiones.
+   */
+  @Override
+  public void process() {
+    // Buscar el área correspondiente
+    LOG.debug("Searching for area {}", areaId);
+    Area area = DirectoryAreas.getInstance().findAreaById(areaId);
+
+    if (area == null) {
+      LOG.debug("Area with id " + areaId + " not found");
+      return;
     }
 
-    public String getAction() {
-        return action;
+    // Obtener todas las puertas que dan acceso a esta área
+    List<Door> doors = area.accept(new DoorsVisitor());
+
+    if (doors == null || doors.isEmpty()) {
+      LOG.debug("No doors give access to area " + areaId);
+      return;
     }
 
-    @Override
-    public JSONObject answerToJson() {
-        JSONObject json = new JSONObject();
-        json.put("action", action);
-        json.put("areaId", areaId);
-        JSONArray jsonRequests = new JSONArray();
-        for (RequestReader rd : requests) {
-            jsonRequests.put(rd.answerToJson());
-        }
-        json.put("requestsDoors", jsonRequests);
-        return json;
+    // Crear y procesar una petición por cada puerta
+    for (Door door : doors) {
+      RequestReader requestReader = new RequestReader(credential, action, now, door.getId());
+
+      // Procesa la petición del lector (autorización + acción)
+      requestReader.process();
+
+      // Añade la respuesta a la lista de sub-peticiones
+      requests.add(requestReader);
     }
-
-    @Override
-    public String toString() {
-        String requestsDoorsStr;
-        if (requests.size() == 0) {
-            requestsDoorsStr = "";
-        } else {
-            requestsDoorsStr = requests.toString();
-        }
-        return "Request{"
-                + "credential=" + credential
-                + ", action=" + action
-                + ", now=" + now
-                + ", areaId=" + areaId
-                + ", requestsDoors=" + requestsDoorsStr
-                + "}";
-    }
-
-    // processing the request of an area is creating the corresponding door requests and forwarding
-    // them to all of its doors. For some it may be authorized and action will be done, for others
-    // it won't be authorized and nothing will happen to them.
-    public void process() {
-        // commented out until Area, Space and Partition are implemented
-        // make the door requests and put them into the area request to be authorized later and
-        // processed later
-    /*Area area = DirectoryAreas.findAreaById(areaId);
-    // an Area is a Space or a Partition
-    if (area != null) {
-      // is null when from the app we click on an action but no place is selected because
-      // there (flutter) I don't control like I do in javascript that all the parameters are provided
-
-      // Make all the door requests, one for each door in the area, and process them.
-      // Look for the doors in the spaces of this area that give access to them.
-      for (Door door : area.getDoorsGivingAccess()) {
-        RequestReader requestReader = new RequestReader(credential, action, now, door.getId());
-        requestReader.process();
-        // after process() the area request contains the answer as the answer
-        // to each individual door request, that is read by the simulator/Flutter app
-        requests.add(requestReader);
-      }
-    }*/
-        //Buscar l’àrea corresponent
-        LOG.debug("Searchig for area {}", areaId);
-        // CAMBIO SINGLETON: Añadido .getInstance()
-        Area area = DirectoryAreas.getInstance().findAreaById(areaId);
-
-        if (area == null) {
-            LOG.debug("Area with id " + areaId + " not found");
-            return;
-        }
-
-        //Obtenir totes les portes que donen accés a aquesta àrea
-        List<Door> doors = area.accept(new DoorsVisitor());
-
-        if (doors == null || doors.isEmpty()) {
-            LOG.debug("No doors give access to area " + areaId);
-            return;
-        }
-
-        //Crear i processar una petició per cada porta
-        for (Door door : doors) {
-            RequestReader requestReader = new RequestReader(credential, action, now, door.getId());
-
-            // processa la petició del lector (autorització + acció)
-            requestReader.process();
-
-            // afegeix la resposta a la llista de sub-peticions
-            requests.add(requestReader);
-        }
-        LOG.debug("Area {} processed succesfully",areaId);
-    }
+    LOG.debug("Area {} processed successfully", areaId);
+  }
 }
