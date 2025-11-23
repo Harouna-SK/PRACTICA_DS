@@ -20,7 +20,7 @@ import org.slf4j.MDC;
 public class Main {
   private static final Logger LOG = LoggerFactory.getLogger(Main.class);
   public static void main(String[] args) {
-      Clock.getInstance().start();
+    Clock.getInstance().start();
     DirectoryAreas.makeAreas();
     DirectoryUsers.makeUsers();
     LOG.debug("Starting webserver");
