@@ -74,12 +74,9 @@ public class Door implements ClockObserver { // use of ClockObserver
                 state.unlockShortly(); // new call
                 break;
             default:
-<<<<<<< HEAD
                 System.out.println("Unknown action: " + action);
                 break;
-=======
-                LOG.warn(ACTIVITY, "Unknown action: {}", action);
->>>>>>> 2773080 (LOGGER implemented without selecting milestone logs)
+                //LOG.warn(ACTIVITY, "Unknown action: {}", action);
         }
     }
 
