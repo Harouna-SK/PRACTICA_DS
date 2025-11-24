@@ -10,10 +10,6 @@ import org.slf4j.LoggerFactory;
  * Clase principal que inicia el sistema.
  * Inicializa el reloj, crea las áreas y usuarios, y arranca el servidor web.
  *
- * <p>Antes de ejecutar, habilitar las aserciones:
- * <a href="https://se-education.org/guides/tutorials/intellijUsefulSettings.html">
- * https://se-education.org/guides/tutorials/intellijUsefulSettings.html</a>
- *
  * @author Sistema ACS
  */
 public class Main {

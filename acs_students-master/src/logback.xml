@@ -56,10 +56,10 @@
         <appender-ref ref="DEBUG_FILE"/>
     </logger>
 
-    <logger name="clase.patron.visitor1" level="OFF"/>
-    <logger name="clase.patron.visitor2" level="OFF"/>
-    <logger name="clase.patron.visitor3" level="OFF"/>
-    <logger name="clase.patron.visitor4" level="OFF"/>
+    <logger name="DoorsVisitor" level="OFF"/>
+    <logger name="FindAreaVisitor" level="OFF"/>
+    <logger name="GetSpaceVisitor" level="OFF"/>
+    <logger name="VisitorAreas" level="OFF"/>
 
     <root level="INFO">
         <appender-ref ref="CONSOLE"/>
@@ -108,6 +108,7 @@
     <!-- =============================================================== -->
 
     <!--  DESCOMENTAR ESTE BLOQUE PARA LOG TOTAL -->
+
     <logger name="baseNoStates" level="DEBUG"/>
 
     <root level="INFO">

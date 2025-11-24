@@ -25,3 +25,147 @@
 2025-11-23 20:38:58,425 [baseNoStates.Door] User with id 11343 trying to unlock door D9 at 2025-11-23T09:30
 2025-11-23 20:38:58,425 [baseNoStates.Door] Request authorized
 2025-11-23 20:38:58,425 [baseNoStates.Door] Action done
+2025-11-23 23:21:32,758 [baseNoStates.Door] User with id 11343 trying to unlock door D1 at 2025-11-23T09:30
+2025-11-23 23:21:32,758 [baseNoStates.Door] Request authorized
+2025-11-23 23:21:32,758 [baseNoStates.Door] Action done
+2025-11-23 23:21:32,763 [baseNoStates.Door] User with id 11343 trying to unlock door D2 at 2025-11-23T09:30
+2025-11-23 23:21:32,763 [baseNoStates.Door] Request authorized
+2025-11-23 23:21:32,763 [baseNoStates.Door] Action done
+2025-11-23 23:21:32,763 [baseNoStates.Door] User with id 11343 trying to unlock door D3 at 2025-11-23T09:30
+2025-11-23 23:21:32,763 [baseNoStates.Door] Request authorized
+2025-11-23 23:21:32,763 [baseNoStates.Door] Action done
+2025-11-23 23:21:32,763 [baseNoStates.Door] User with id 11343 trying to unlock door D4 at 2025-11-23T09:30
+2025-11-23 23:21:32,763 [baseNoStates.Door] Request authorized
+2025-11-23 23:21:32,763 [baseNoStates.Door] Action done
+2025-11-23 23:21:32,763 [baseNoStates.Door] User with id 11343 trying to unlock door D5 at 2025-11-23T09:30
+2025-11-23 23:21:32,765 [baseNoStates.Door] Request authorized
+2025-11-23 23:21:32,765 [baseNoStates.Door] Action done
+2025-11-23 23:21:32,765 [baseNoStates.Door] User with id 11343 trying to unlock door D6 at 2025-11-23T09:30
+2025-11-23 23:21:32,765 [baseNoStates.Door] Request authorized
+2025-11-23 23:21:32,765 [baseNoStates.Door] Action done
+2025-11-23 23:21:32,766 [baseNoStates.Door] User with id 11343 trying to unlock door D8 at 2025-11-23T09:30
+2025-11-23 23:21:32,766 [baseNoStates.Door] Request authorized
+2025-11-23 23:21:32,766 [baseNoStates.Door] Action done
+2025-11-23 23:21:32,766 [baseNoStates.Door] User with id 11343 trying to unlock door D7 at 2025-11-23T09:30
+2025-11-23 23:21:32,766 [baseNoStates.Door] Request authorized
+2025-11-23 23:21:32,766 [baseNoStates.Door] Action done
+2025-11-23 23:21:32,767 [baseNoStates.Door] User with id 11343 trying to unlock door D9 at 2025-11-23T09:30
+2025-11-23 23:21:32,767 [baseNoStates.Door] Request authorized
+2025-11-23 23:21:32,768 [baseNoStates.Door] Action done
+2025-11-24 10:09:52,107 [baseNoStates.Door] User with id 11343 trying to unlock door D1 at 2025-11-24T09:30
+2025-11-24 10:09:52,108 [baseNoStates.Door] Request authorized
+2025-11-24 10:09:52,109 [baseNoStates.Door] Action done
+2025-11-24 10:09:52,109 [baseNoStates.Door] User with id 11343 trying to unlock door D2 at 2025-11-24T09:30
+2025-11-24 10:09:52,109 [baseNoStates.Door] Request authorized
+2025-11-24 10:09:52,109 [baseNoStates.Door] Action done
+2025-11-24 10:09:52,109 [baseNoStates.Door] User with id 11343 trying to unlock door D3 at 2025-11-24T09:30
+2025-11-24 10:09:52,109 [baseNoStates.Door] Request authorized
+2025-11-24 10:09:52,110 [baseNoStates.Door] Action done
+2025-11-24 10:09:52,111 [baseNoStates.Door] User with id 11343 trying to unlock door D4 at 2025-11-24T09:30
+2025-11-24 10:09:52,111 [baseNoStates.Door] Request authorized
+2025-11-24 10:09:52,111 [baseNoStates.Door] Action done
+2025-11-24 10:09:52,111 [baseNoStates.Door] User with id 11343 trying to unlock door D5 at 2025-11-24T09:30
+2025-11-24 10:09:52,111 [baseNoStates.Door] Request authorized
+2025-11-24 10:09:52,111 [baseNoStates.Door] Action done
+2025-11-24 10:09:52,112 [baseNoStates.Door] User with id 11343 trying to unlock door D6 at 2025-11-24T09:30
+2025-11-24 10:09:52,112 [baseNoStates.Door] Request authorized
+2025-11-24 10:09:52,112 [baseNoStates.Door] Action done
+2025-11-24 10:09:52,112 [baseNoStates.Door] User with id 11343 trying to unlock door D8 at 2025-11-24T09:30
+2025-11-24 10:09:52,112 [baseNoStates.Door] Request authorized
+2025-11-24 10:09:52,112 [baseNoStates.Door] Action done
+2025-11-24 10:09:52,112 [baseNoStates.Door] User with id 11343 trying to unlock door D7 at 2025-11-24T09:30
+2025-11-24 10:09:52,112 [baseNoStates.Door] Request authorized
+2025-11-24 10:09:52,112 [baseNoStates.Door] Action done
+2025-11-24 10:09:52,112 [baseNoStates.Door] User with id 11343 trying to unlock door D9 at 2025-11-24T09:30
+2025-11-24 10:09:52,112 [baseNoStates.Door] Request authorized
+2025-11-24 10:09:52,112 [baseNoStates.Door] Action done
+2025-11-24 10:09:56,241 [baseNoStates.Door] User with id 11343 trying to lock door D1 at 2025-11-24T09:30
+2025-11-24 10:09:56,241 [baseNoStates.Door] Request authorized
+2025-11-24 10:09:56,241 [baseNoStates.Door] Action done
+2025-11-24 10:09:56,241 [baseNoStates.Door] User with id 11343 trying to lock door D2 at 2025-11-24T09:30
+2025-11-24 10:09:56,241 [baseNoStates.Door] Request authorized
+2025-11-24 10:09:56,241 [baseNoStates.Door] Action done
+2025-11-24 10:09:56,241 [baseNoStates.Door] User with id 11343 trying to lock door D3 at 2025-11-24T09:30
+2025-11-24 10:09:56,241 [baseNoStates.Door] Request authorized
+2025-11-24 10:09:56,241 [baseNoStates.Door] Action done
+2025-11-24 10:09:56,241 [baseNoStates.Door] User with id 11343 trying to lock door D4 at 2025-11-24T09:30
+2025-11-24 10:09:56,241 [baseNoStates.Door] Request authorized
+2025-11-24 10:09:56,241 [baseNoStates.Door] Action done
+2025-11-24 10:09:56,241 [baseNoStates.Door] User with id 11343 trying to lock door D5 at 2025-11-24T09:30
+2025-11-24 10:09:56,241 [baseNoStates.Door] Request authorized
+2025-11-24 10:09:56,241 [baseNoStates.Door] Action done
+2025-11-24 10:09:56,241 [baseNoStates.Door] User with id 11343 trying to lock door D6 at 2025-11-24T09:30
+2025-11-24 10:09:56,243 [baseNoStates.Door] Request authorized
+2025-11-24 10:09:56,243 [baseNoStates.Door] Action done
+2025-11-24 10:09:56,243 [baseNoStates.Door] User with id 11343 trying to lock door D8 at 2025-11-24T09:30
+2025-11-24 10:09:56,243 [baseNoStates.Door] Request authorized
+2025-11-24 10:09:56,243 [baseNoStates.Door] Action done
+2025-11-24 10:09:56,243 [baseNoStates.Door] User with id 11343 trying to lock door D7 at 2025-11-24T09:30
+2025-11-24 10:09:56,243 [baseNoStates.Door] Request authorized
+2025-11-24 10:09:56,243 [baseNoStates.Door] Action done
+2025-11-24 10:09:56,243 [baseNoStates.Door] User with id 11343 trying to lock door D9 at 2025-11-24T09:30
+2025-11-24 10:09:56,243 [baseNoStates.Door] Request authorized
+2025-11-24 10:09:56,243 [baseNoStates.Door] Action done
+2025-11-24 10:59:04,411 [baseNoStates.Door] User with id 11343 trying to lock door D1 at 2025-11-24T09:30
+2025-11-24 10:59:04,411 [baseNoStates.Door] Request authorized
+2025-11-24 10:59:04,411 [baseNoStates.Locked] Door D1 is already locked
+2025-11-24 10:59:04,411 [baseNoStates.Door] Action done
+2025-11-24 10:59:04,411 [baseNoStates.Door] User with id 11343 trying to lock door D2 at 2025-11-24T09:30
+2025-11-24 10:59:04,411 [baseNoStates.Door] Request authorized
+2025-11-24 10:59:04,413 [baseNoStates.Locked] Door D2 is already locked
+2025-11-24 10:59:04,413 [baseNoStates.Door] Action done
+2025-11-24 10:59:04,413 [baseNoStates.Door] User with id 11343 trying to lock door D3 at 2025-11-24T09:30
+2025-11-24 10:59:04,413 [baseNoStates.Door] Request authorized
+2025-11-24 10:59:04,413 [baseNoStates.Locked] Door D3 is already locked
+2025-11-24 10:59:04,413 [baseNoStates.Door] Action done
+2025-11-24 10:59:04,413 [baseNoStates.Door] User with id 11343 trying to lock door D4 at 2025-11-24T09:30
+2025-11-24 10:59:04,413 [baseNoStates.Door] Request authorized
+2025-11-24 10:59:04,413 [baseNoStates.Locked] Door D4 is already locked
+2025-11-24 10:59:04,413 [baseNoStates.Door] Action done
+2025-11-24 10:59:04,413 [baseNoStates.Door] User with id 11343 trying to lock door D5 at 2025-11-24T09:30
+2025-11-24 10:59:04,413 [baseNoStates.Door] Request authorized
+2025-11-24 10:59:04,413 [baseNoStates.Locked] Door D5 is already locked
+2025-11-24 10:59:04,413 [baseNoStates.Door] Action done
+2025-11-24 10:59:04,413 [baseNoStates.Door] User with id 11343 trying to lock door D6 at 2025-11-24T09:30
+2025-11-24 10:59:04,413 [baseNoStates.Door] Request authorized
+2025-11-24 10:59:04,413 [baseNoStates.Locked] Door D6 is already locked
+2025-11-24 10:59:04,413 [baseNoStates.Door] Action done
+2025-11-24 10:59:04,413 [baseNoStates.Door] User with id 11343 trying to lock door D8 at 2025-11-24T09:30
+2025-11-24 10:59:04,413 [baseNoStates.Door] Request authorized
+2025-11-24 10:59:04,413 [baseNoStates.Locked] Door D8 is already locked
+2025-11-24 10:59:04,413 [baseNoStates.Door] Action done
+2025-11-24 10:59:04,413 [baseNoStates.Door] User with id 11343 trying to lock door D7 at 2025-11-24T09:30
+2025-11-24 10:59:04,413 [baseNoStates.Door] Request authorized
+2025-11-24 10:59:04,413 [baseNoStates.Locked] Door D7 is already locked
+2025-11-24 10:59:04,413 [baseNoStates.Door] Action done
+2025-11-24 10:59:04,413 [baseNoStates.Door] User with id 11343 trying to lock door D9 at 2025-11-24T09:30
+2025-11-24 10:59:04,413 [baseNoStates.Door] Request authorized
+2025-11-24 10:59:04,413 [baseNoStates.Locked] Door D9 is already locked
+2025-11-24 10:59:04,413 [baseNoStates.Door] Action done
+2025-11-24 10:59:06,014 [baseNoStates.Door] User with id 11343 trying to unlock door D1 at 2025-11-24T09:30
+2025-11-24 10:59:06,014 [baseNoStates.Door] Request authorized
+2025-11-24 10:59:06,014 [baseNoStates.Door] Action done
+2025-11-24 10:59:06,014 [baseNoStates.Door] User with id 11343 trying to unlock door D2 at 2025-11-24T09:30
+2025-11-24 10:59:06,014 [baseNoStates.Door] Request authorized
+2025-11-24 10:59:06,014 [baseNoStates.Door] Action done
+2025-11-24 10:59:06,014 [baseNoStates.Door] User with id 11343 trying to unlock door D3 at 2025-11-24T09:30
+2025-11-24 10:59:06,014 [baseNoStates.Door] Request authorized
+2025-11-24 10:59:06,014 [baseNoStates.Door] Action done
+2025-11-24 10:59:06,014 [baseNoStates.Door] User with id 11343 trying to unlock door D4 at 2025-11-24T09:30
+2025-11-24 10:59:06,014 [baseNoStates.Door] Request authorized
+2025-11-24 10:59:06,014 [baseNoStates.Door] Action done
+2025-11-24 10:59:06,014 [baseNoStates.Door] User with id 11343 trying to unlock door D5 at 2025-11-24T09:30
+2025-11-24 10:59:06,014 [baseNoStates.Door] Request authorized
+2025-11-24 10:59:06,014 [baseNoStates.Door] Action done
+2025-11-24 10:59:06,014 [baseNoStates.Door] User with id 11343 trying to unlock door D6 at 2025-11-24T09:30
+2025-11-24 10:59:06,014 [baseNoStates.Door] Request authorized
+2025-11-24 10:59:06,014 [baseNoStates.Door] Action done
+2025-11-24 10:59:06,014 [baseNoStates.Door] User with id 11343 trying to unlock door D8 at 2025-11-24T09:30
+2025-11-24 10:59:06,014 [baseNoStates.Door] Request authorized
+2025-11-24 10:59:06,014 [baseNoStates.Door] Action done
+2025-11-24 10:59:06,022 [baseNoStates.Door] User with id 11343 trying to unlock door D7 at 2025-11-24T09:30
+2025-11-24 10:59:06,022 [baseNoStates.Door] Request authorized
+2025-11-24 10:59:06,022 [baseNoStates.Door] Action done
+2025-11-24 10:59:06,022 [baseNoStates.Door] User with id 11343 trying to unlock door D9 at 2025-11-24T09:30
+2025-11-24 10:59:06,022 [baseNoStates.Door] Request authorized
+2025-11-24 10:59:06,022 [baseNoStates.Door] Action done
